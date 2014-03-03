@@ -1,0 +1,27 @@
+{% load facilities_tags thumbnail %}
+{% for attraction in attractions %}
+    {% shuffle as color %}
+    <div class="col-md-6">
+        <div class="search-blocks search-blocks-top-{{ color }}">
+            <div class="row">
+                {% if attraction.image_position == "left" %}
+                    <div class="col-md-4 search-img">
+                        <img class="img-responsive" src="{% thumbnail attraction.image 150x0 %}" alt="">
+                    </div>
+                {% endif %}
+                <div class="col-md-8">
+                    <h2>{{ attraction.title }}</h2>
+                    <p>{{ attraction.description }}</p>
+                    {% if attraction.link %}
+                    <a href="{{ attraction.url }}" class="btn-u btn-u-{{ color }}">{{ attraction.button_text }}</a>
+                    {% endif %}
+                </div>
+                {% if attraction.image_position == "right" %}
+                    <div class="col-md-4 search-img">
+                        <img class="img-responsive" src="{% thumbnail attraction.image 150x0 %}" alt="">
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endfor %}

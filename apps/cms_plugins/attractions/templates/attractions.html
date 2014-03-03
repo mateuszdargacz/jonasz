@@ -1,0 +1,14 @@
+{% load attractions_tag %}
+
+{% render_map g_map markers as map %}
+{{ map.map }}
+{{ map.media.js }}
+<script type="text/javascript">
+    window.myobj = {
+        markerOver: function() { this.openInfoWindow(); },
+        markerOut: function() { this.closeInfoWindow(); }
+    };
+    google.maps.event.addDomListener(window, 'resize', function() {
+    map.setCenter(homeLatlng);
+});
+</script>

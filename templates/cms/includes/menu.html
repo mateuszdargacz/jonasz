@@ -1,0 +1,10 @@
+{% load menu_tags %}
+{% for child in children %}
+<li class="{% if child.selected or child.has_active_child %}active{% endif %}{% if child.children %} dropdown{% endif %}">
+  {% if child.children %}
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ child.get_menu_title }}<b class="caret"></b></a>
+  {% else %}
+  <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" title="{{ child.get_menu_title }}">{{ child.get_menu_title }}</a>
+	{% endif %}
+</li>
+{% endfor %}

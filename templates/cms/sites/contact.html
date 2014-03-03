@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load cms_tags  menu_tags %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/contact_form.js"></script>
+
+{% endblock %}
+
+{% block content %}
+            <div class="headline">
+                <h3>Napisz do nas </h3>
+            </div>
+            <div class="row contact">
+                <p>
+                    Masz pytanie?  Napisz! a skontaktujemy się z Tobą telefonicznie lub na podany adres e-mail w ciągu 24 godzin.
+                </p>
+                <form id="contact-form" action="#">
+                    <div class="row form">
+                        <div class="col-sm-6 row-col">
+                            <div class="box">
+                                <div id="name-group" class="form-group">
+                                <input class="name form-control" type="text" name="name" placeholder="Imię i nazwisko">
+                                </div>
+                                <div id="email-group" class="form-group">
+                                <input class="mail form-control" type="text" name="email" placeholder="Adres e-mail">
+                                </div>
+                                <div id="phone-group" class="form-group ">
+                                <input class="phone form-control" type="text" name="phone" placeholder="Numer kontaktowy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="box">
+                                <div id="message-group" class="form-group">
+                                <textarea name="message"  rows="6" placeholder="Wpisz wiadomość" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row submit">
+                        <div id="submit-contact" class="col-md-2 pull-right">
+                            <br/>
+                            <input  class="btn-u btn-u-green"type="submit" value="Wyślij Wiadomość">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+                     {% placeholder "Mapa" %}
+
+{% endblock %}

@@ -1,12 +1,12 @@
-# Django settings for agro project.
-import sys,os
+# -*- coding: utf-8 -*-
 
-PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__)))
+import sys, os
+
+PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
 PROJECT_ROOT = os.path.abspath(os.path.join(PROJECT_PATH))
 sys.path.insert(0, os.path.join(PROJECT_PATH, 'apps'))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
 ADMINS = (
     ('Mateusz Dargacz', 'mateuszdargacz@gmail.com'),
 )
@@ -101,13 +101,17 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.doc.XViewMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.language.LanguageCookieMiddleware',
 )
 
 ROOT_URLCONF = 'urls'
@@ -115,10 +119,9 @@ ROOT_URLCONF = 'urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'project.wsgi.application'
 
-import os
-TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
-
+TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT,'templates'))
 INSTALLED_APPS = (
+    'nested_inlines',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -127,8 +130,29 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
 
+    #cms
+    'south',
+    'menus',
+    'mptt',
+    'sekizai',
+    'cms',
+    'cms.plugins.text',
+    'cms.plugins.picture',
+    'cms.plugins.link',
+    'cms.plugins.googlemap',
+    'cms.admin',
+    #thidparty
+    'gmapi',
+    'easy_thumbnails',
+    'adminsortable',
     #my apps
     'reservation',
+    'cms_plugins.attractions',
+    'cms_plugins.slider',
+    'cms_plugins.gallery',
+    'cms_plugins.facilities',
+    'cms_plugins.contact_form',
+
 )
 
 # A sample logging configuration. The only tangible logging
@@ -161,17 +185,39 @@ LOGGING = {
 }
 
 #DJango CMS
-CMS_TEMPLATES = (
-    ('cms/pages/main.html', 'Aktualnosci'),
-    ('cms/pages/about.html', 'Nasze biuro'),
-    ('cms/pages/insurance.html', 'Ubezpiecznia'),
-    ('cms/pages/single_insurance.html', 'Ubezpieczenia potomek'),
-    ('cms/pages/forms.html', 'Formularze'),
-    ('cms/pages/downloads.html', 'Zalaczniki'),
-    ('cms/pages/contact.html', 'Kontakt'),
-    ('cms/pages/liquidation.html','Likwidacja'),
-
-
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'cms.context_processors.media',
+    'sekizai.context_processors.sekizai',
 )
+
+CMS_TEMPLATES = (
+    ('cms/sites/gallery.html', 'Galeria'),
+    ('cms/sites/about.html', u'Strona główna'),
+    ('cms/sites/atractions.html', 'Atrakcje'),
+    ('cms/sites/surroundings.html', 'Otoczenie'),
+    ('cms/sites/contact.html', 'Kontakt'),
+    ('cms/sites/empty.html', 'Pusty'),
+)
+LANGUAGES = [
+    ('pl', 'Polish'),
+    ('en', 'English'),
+    ('de', 'German'),
+    ('ru', 'Russian')
+]
 CMS_REDIRECTS=True
 CMS_SEO_FIELDS=True
+
+#Emails
+CONTACT_EMAIL_TO = ['mateusz.dargacz@gmail.com']
+#email settings
+DEFAULT_FROM_EMAIL = 'mateuszdargacz@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'mateuszdargacz'
+EMAIL_HOST_PASSWORD = '290719900a'
