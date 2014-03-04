@@ -1,0 +1,13 @@
+<script type="text/javascript">
+	$(document).ready(function(event){
+		$('.calendar_month_switch').live('click', function(ev){
+			ev.preventDefault();
+			$.get($(this).attr('href'), function(data) {
+				$('#calendar_month').html(data);
+			});
+		})
+	})
+</script>
+<div id="calendar_month" class="ui-corner-all">
+	{{ calendar|safe }}
+</div>

@@ -17,6 +17,6 @@ urlpatterns = patterns('',
 
 urlpatterns += i18n_patterns('',
     url(r'^reservation/',include('reservation.urls',namespace='reservation')),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^apartaments/',include('apartaments.urls',namespace='apartaments')),
     url(r'^', include('cms.urls')),
 )

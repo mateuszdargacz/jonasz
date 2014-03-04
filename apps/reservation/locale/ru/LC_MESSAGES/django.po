@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-18 16:51+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: .\cms_plugins.py:17
+msgid "reservation form"
+msgstr ""
+
+#: .\cms_plugins.py:41
+msgid "price calendar"
+msgstr ""
+
+#: .\fields.py:20
+msgid "Please enter a credit card number."
+msgstr ""
+
+#: .\fields.py:21
+msgid "The credit card number you entered is invalid."
+msgstr ""
+
+#: .\fields.py:51
+msgid "Please enter a valid month."
+msgstr ""
+
+#: .\fields.py:52
+msgid "Please enter a valid year."
+msgstr ""
+
+#: .\fields.py:53
+msgid "This expiry date has passed."
+msgstr ""
+
+#: .\fields.py:107
+msgid ""
+"Please enter the three- or four-digit verification code for your credit card."
+msgstr ""
+
+#: .\fields.py:108
+msgid "The verification value you entered is invalid."
+msgstr ""
+
+#: .\forms.py:14
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: .\models.py:19
+msgid "Apartament"
+msgstr ""
+
+#: .\models.py:20
+msgid "Contact person"
+msgstr ""
+
+#: .\models.py:21
+msgid "Booking from *"
+msgstr ""
+
+#: .\models.py:22
+msgid "Booking to *"
+msgstr ""
+
+#: .\models.py:23
+msgid "E-mail"
+msgstr ""
+
+#: .\models.py:25
+msgid "Phone"
+msgstr ""
+
+#: .\models.py:27
+msgid "I agree to the processing of personal data"
+msgstr ""
+
+#: .\models.py:28
+msgid "Confirmation of data"
+msgstr ""
+
+#: .\models.py:29
+msgid "Confirmation of payment"
+msgstr ""
+
+#: .\models.py:60
+msgid "calendar"
+msgstr ""
+
+#: .\models.py:67
+msgid "Free"
+msgstr ""
+
+#: .\models.py:68
+msgid "Booking"
+msgstr ""
+
+#: .\models.py:69
+msgid "Unavailable"
+msgstr ""
+
+#: .\models.py:95
+msgid "price"
+msgstr ""
+
+#: .\templates\reservation\contact_plugin.html.py:18
+msgid "Book your apartment"
+msgstr ""
+
+#: .\templates\reservation\contact_plugin.html.py:31
+msgid "Send"
+msgstr ""
+
+#: .\templates\reservation\contact_plugin.html.py:37
+msgid "Thank you message has been sent"
+msgstr ""
+
+#: .\templates\reservation\contact_plugin.html.py:43
+msgid ""
+"If you selected date the apartment is already booked, it will be suggested "
+"to you another closest to date."
+msgstr ""
