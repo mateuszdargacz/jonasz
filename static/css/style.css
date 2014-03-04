@@ -1476,3 +1476,12 @@ ul.blog-tags a:hover i {
 .pop-height{
     height: 300px;
 }
+.navbar > .container .navbar-brand {
+margin-top: -15px;
+}
+
+.gallery-image{
+    border: solid 1px #889181;
+    border-radius: 5px !important;
+
+}

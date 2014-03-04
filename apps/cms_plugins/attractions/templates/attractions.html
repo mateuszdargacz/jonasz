@@ -1,8 +1,11 @@
 {% load attractions_tag %}
 
 {% render_map g_map markers as map %}
-{{ map.map }}
+<div class="col-md-8 col-md-offset-1">
+    {{ map.map }}
+</div>
 {{ map.media.js }}
+
 <script type="text/javascript">
     window.myobj = {
         markerOver: function() { this.openInfoWindow(); },
