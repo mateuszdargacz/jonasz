@@ -1,6 +1,8 @@
-{% load  cms_tags menu_tags sekizai_tags i18n  %}
+{% load  cms_tags menu_tags sekizai_tags i18n thumbnail %}
+{% block HTML %}
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+{% endblock %}
+<html lang="en" class="">
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
@@ -23,6 +25,7 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/headers/header1.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/responsive.css">
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery.ui.css">
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="{{ STATIC_URL }}plugins/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}plugins/flexslider/flexslider.css">
@@ -90,7 +93,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img id="logo-header" src="{{ STATIC_URL }}img/logo1-default.png" alt="Logo">
+                    <img id="logo-header" src="{{ STATIC_URL }}img/logo.png" alt="Logo">
                 </a>
             </div>
 
@@ -165,7 +168,9 @@
 {#    </div><!--/container-->#}
 {#</div>#}
 <!-- JS Global Compulsory -->
+
 <script type="text/javascript" src="{{ STATIC_URL }}plugins/jquery-1.10.2.min.js"></script>
+
 <script type="text/javascript" src="{{ STATIC_URL }}plugins/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}plugins/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}plugins/hover-dropdown.min.js"></script>
@@ -183,6 +188,7 @@
 <script type="text/javascript" src="{{ STATIC_URL }}js/app.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/pages/index.js"></script>
 <script src="{{ STATIC_URL }}js/jquery.mixitup.min.js"></script>
+
 {% render_block "js" %}
      {% block extra-js %}{% endblock %}
 

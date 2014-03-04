@@ -98,11 +98,11 @@ class PriceHTMLCalendar(calendar.HTMLCalendar):
         return '''
             <tr class="month-row">
                 <th colspan="7">
-                    <div class="month-header ui-corner-all">
+                    <div class="month-header ui-corner-all nav nav-pills">
                         <div class="row-fluid">
-                            <div class="span4 switch-left">%s</div>
-                            <div class="span4 month-name">%s</div>
-                            <div class="span4 switch-right">%s</div>
+                            <div class="col-md-4 switch-left">%s</div>
+                            <div class="col-md-4 month-name">%s</div>
+                            <div class="col-md-4 switch-right">%s</div>
                         </div>
                     </div>
                 </th>

@@ -2,6 +2,13 @@
 {% load i18n cms_tags menu_tags sekizai_tags thumbnail %}
 {% block extra-js %}
     {{ block.super }}
+<script type="text/javascript" src="{{ STATIC_URL }}plugins/bxslider/jquery.bxslider.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initBxSlider();
+    });
+</script>
     <script type="text/javascript"
             src="https://maps-api-ssl.google.com/maps/api/js?v=3&sensor=true"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -78,20 +85,21 @@
 
     </script>
 {% endblock %}
-{% block "css" %}
+{% block css %}
     <link rel="stylesheet"  href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/apartament.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}plugins/bxslider/jquery.bxslider.css">
 {% endblock %}
 
 {% block reservation %}
+    <div class="main-content">
     <div class="container purchase">
     <div class="row">
     <div class="col-md-3 visible-desktop">
         <div class="row-fluid">
             <div class="rezerwacja visible-desktop">
-                <div class="text">{% trans "Booking" %}</div>
+                <div class="headline"><h2>{% trans "Booking" %}</h2></div>
                 <div class="rezerw_content">
-
                     <form action="/{{ LANGUAGE_CODE|lower }}/apartaments/search"
                           method="GET">
                         <p>{% trans "Arrival" %}</p>
@@ -101,21 +109,20 @@
                         <input type="text" name="comingback"
                                id="comingback"/>
 
-                        <p>{% trans "Number of persons" %}</p>
-                        <select id="id_persons" name="persons">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4" selected>4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                        </select>
+                        <div class="col-md-8 form-group" style="margin-left: -15px">
+                            <label class="control-label  " for="id_persons">{% trans "Number of persons" %}</label>
+                            <select class="form-control" id="id_persons" name="persons">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4" selected>4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
 
-                        <div class="arrow"></div>
-
-                        <button type="submit">
+                        <button class="btn-u btn-u-green" type="submit">
                             {% trans "check availability" %}
                         </button>
                     </form>
@@ -125,8 +132,6 @@
         </div>
     </div>
     <div class="col-md-9 apartamenty">
-
-
         <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2>
@@ -134,11 +139,13 @@
                                     <div class="title">{{ apartament.name }}</div>
                                 </a>
                             </h2>
-                        </div>
-                        <div class="panel-body">
+                            <br/>
+                        <div class="panel-body col-md-6">
                             <div class="subtitle">{{ apartament.subtitle }}</div>
+                            <hr/>
                             <div class="aboutText">{{ apartament.teaserText|truncatechars:121 }}</div>
                             <div class="rooms">
+                                <div class="headline"><h3>{% trans "Info" %}</h3></div>
                                 <div>{% trans "Rooms" %}: {{ apartament.rooms }}</div>
                                 <div>{% trans "Max people" %}: {{ apartament.maxPeople }}</div>
                                 <div>
@@ -149,74 +156,66 @@
                                 {% for price in apartament.price.all %}
                                     {{ price.price }}<br>{% endfor %}
                             </div>
-                            <a class="pull-right" href="{% url "apartaments:apartament_detail" apartament.slug %}#photos"><img
+
+                        </div>
+                        <div class="col-md-6">
+                        <a class="pull-right" href="{% url "apartaments:apartament_detail" apartament.slug %}#photos"><img
                                 src="{% thumbnail apartament.teaserPicture 271x266 %}"
                                 alt=""></a>
                         </div>
                         <div class="panel-footer">
-                            <a class="btn btn-buy"
+                            <a class="btn btn-buy pull-right"
                                href="/{{ LANGUAGE_CODE|lower }}/reservation/?name={{ apartament.pk }}{% if start and end %};start={{ start }};end={{ end }}{% endif %}">
-                                <div class="span4 lookup">
+                                <div class="col-md-4 lookup">
                                     {% trans "Book" %}
                                 </div>
                             </a>
                         </div>
-                        <div class="panel-blue text-center">
-
-                        </div>
-                        <div class="panel-grey">
+                        <div class="clearfix"></div>
+                        <hr/>
+                        <div class="panel-grey col-md-12">
                             {{ apartament.description }}
                         </div>
-                   {% for photos in listOfPhotos %}
-
-                    <div class="row panel-grey">
-                        {% if photos.template == "1" %}
-                            <div class="span12 photos text-center">
-                                <img src="{% thumbnail photos.imageField1 970x0 %}">
-                            </div>
+        <div class="carousel slide carousel-v1" id="myCarousel">
+                <div class="carousel-inner">
+                    {% for photos in listOfPhotos %}
+                        {% if photos.imageField1 %}
+                        <div class="item active">
+                        <img src="{% thumbnail photos.imageField1 970x0 %}">
+                        </div>
                         {% endif %}
-
-                        {% if photos.template == "2" %}
-                            <div class="span6 photos text-center">
-                                <img src="{% thumbnail photos.imageField1 485x0 %}">
-                            </div>
-                            <div class="span6 photos">
-                                <img src="{% thumbnail photos.imageField2 485x0 %}">
-                            </div>
+                        {% if photos.imageField2 %}
+                        <div class="item">
+                        <img src="{% thumbnail photos.imageField2 970x0 %}">
+                        </div>
                         {% endif %}
-
-                        {% if photos.template == "3" %}
-                            <div class="span4 photos text-center">
-                                <img src="{% thumbnail photos.imageField1 310x0 %}">
-                            </div>
-                            <div class="span4 photos text-center">
-                                <img src="{% thumbnail photos.imageField2 310x0 %}">
-                            </div>
-                            <div class="span4 photos text-center">
-                                <img src="{% thumbnail photos.imageField3 310x0 %}">
-                            </div>
+                        {% if photos.imageField3 %}
+                        <div class="item">
+                        <img src="{% thumbnail photos.imageField3 970x0 %}">
+                        </div>
                         {% endif %}
-                    </div>
                     {% endfor %}
-                    <div class="panel-blue">
-                        <div id="calendar_month" class="ui-corner-all">
-                            {{ calendar|safe }}
-                        </div>
-                    </div>
-                    <div class="panel">
-                         <div class="plugin_googlemap">
-                            {% if apartament.street %}<h2>{{ apartament.name }}
-                                </h2>{% endif %}
+                </div>
+                <div class="carousel-arrow">
+                    <a data-slide="prev" href="#myCarousel" class="left carousel-control">
+                        <i class="icon-angle-left"></i>
+                    </a>
+                    <a data-slide="next" href="#myCarousel" class="right carousel-control">
+                        <i class="icon-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        <div class="clearfix spacer"></div>
+            <div class="panel-blue">
+                <div id="calendar_month" class="ui-corner-all">
+                    {{ calendar|safe }}
+                </div>
+            </div>
 
-                            <div id="google-map-{{ apartament.pk }}"
-                                 class="google-map-container"
-                                 style="height: 500px;"></div>
-
-                        </div>
-                    </div>
             </div>
     </div>
 
+    </div>
     </div>
 {% endblock %}
 

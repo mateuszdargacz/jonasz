@@ -218,9 +218,9 @@ CMS_SEO_FIELDS=True
 #Emails
 CONTACT_EMAIL_TO = ['mateusz.dargacz@gmail.com']
 #email settings
-DEFAULT_FROM_EMAIL = 'mateuszdargacz@gmail.com'
+DEFAULT_FROM_EMAIL = 'Agroturystyka "U Marleny" <mateuszdargacz@gmail.com>'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'mateuszdargacz'
-EMAIL_HOST_PASSWORD = '290719900a'
+EMAIL_HOST_PASSWORD = 'a'

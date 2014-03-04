@@ -1,0 +1,363 @@
+/*------------------*/
+/* Gradients
+ ---------------------------------------------------------------------------- */
+/* white 75% -> grey */
+.main-content {
+  background: url('../img/bgPlain.jpg') center;
+  background-position: top;
+  background-repeat: repeat-y;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 30px !important;
+  -webkit-box-shadow: inset 0px -10px 10px -10px #444242;
+  -moz-box-shadow: inset 0px -10px 10px -10px #444242;
+  box-shadow: inset 0px -10px 10px -10px #444242;
+}
+.main-content .rezerwacja {
+  margin: 20px auto;
+  text-align: center;
+  z-index: 999;
+  background: none;
+}
+.main-content .rezerwacja .text {
+  padding-top: 32px;
+  margin-bottom: -38px;
+  margin-left: 36px;
+  position: relative;
+  width: 306px;
+  height: 104px;
+  background: url(../img/rezerwacja2.png) no-repeat;
+  z-index: 999px;
+  color: #f1efeb;
+  /* text color */
+  font-family: NOVECENTO_WIDE_BOOKBOLD;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(164, 132, 97, 0.75);
+  text-transform: uppercase;
+}
+.main-content .rezerwacja img {
+  opacity: 1;
+}
+.main-content .rezerwacja .rezerw_content {
+  padding: 10px;
+  font-family: NOVECENTO_WIDENORMAL;
+  font-size: 12px;
+  text-align: left;
+  height: 260px;
+  width: 236px;
+  margin: 0 auto;
+  background-color: #E1FFDD;
+  margin-top: -2px;
+  -webkit-box-shadow: inset 1px 0px 0px 0px #dfdacf;
+  -moz-box-shadow: inset 1px 0px 0px 0px #dfdacf;
+  box-shadow: inset 1px 0px 0px 0px #dfdacf;
+  -webkit-box-shadow: 2px 2px 19px 0px #444242;
+  -moz-box-shadow: 2px 2px 19px 0px #444242;
+  box-shadow: 2px 2px 19px 0px #444242;
+}
+
+.main-content .rezerwacja .rezerw_content .ui-datepicker-trigger {
+  cursor: pointer;
+  margin-top: -10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.main-content .rezerwacja .rezerw_content .arrow {
+  pointer-events: none;
+  margin-left: -30px;
+  display: inline-block;
+  background: url(../img/showMore.jpg) right no-repeat;
+  content: url(../img/showMore.jpg);
+}
+
+.main-content .baners {
+  margin: 10px auto;
+}
+.main-content .baners .topTitle {
+  font-family: novecento_widenormal;
+  font-size: 12px;
+  margin-top: 2%;
+}
+.main-content .baners .mainTitle {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  font-family: novecento_wide_bookbold;
+  font-weight: bold;
+  font-size: 24px;
+  color: #845606;
+  border-bottom: 1px solid #dfdacf;
+}
+.main-content .baners .content {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 12px;
+}
+.main-content .baners .baner {
+  margin-top: 20px;
+  margin-right: 0.7%;
+  display: inline-block;
+  width: 311px;
+  min-height: 204px;
+  background-color: #fff;
+}
+.main-content .cena {
+  text-align: center;
+  font-family: 'Playball', cursive;
+  font-size: 28px;
+  color: #E1FFDD;
+}
+.main-content .apartamenty {
+  color: #845606;
+  margin: 10px auto;
+  width: 767px;
+  /***** calendar *****/
+}
+.main-content .apartamenty .description_apartment {
+  padding: 20px;
+  background-color: #fff !important;
+}
+.main-content .apartamenty #calendar_month {
+  display: block;
+}
+.main-content .apartamenty #calendar_month table {
+  padding: 5px;
+  border: 0;
+  margin: 0 auto;
+  border-collapse: separate;
+}
+.main-content .apartamenty #calendar_month table .month-header {
+  background: #5fb611;
+  padding: 10px 10px 5px 10px;
+}
+.main-content .apartamenty #calendar_month table tr.week-row {
+  color: #5fb611;
+}
+.main-content .apartamenty #calendar_month table td {
+  padding: 5px 5px;
+}
+.main-content .apartamenty #calendar_month table td.past {
+  opacity: 0.5;
+}
+.main-content .apartamenty #calendar_month table th {
+  font-size: 16px;
+  text-transform: capitalize;
+  height: 32px;
+}
+.main-content .apartamenty #calendar_month .month-name {
+  font-size: 18px;
+  color: #E5F1E5;
+}
+.main-content .apartamenty #calendar_month .switch-left {
+  text-align: left;
+}
+.main-content .apartamenty #calendar_month .switch-right {
+  text-align: right;
+}
+.main-content .apartamenty #calendar_month a {
+  color: #E5F1E5;
+}
+.main-content .apartamenty #calendar_month .day-container {
+  width: 82px;
+  height: 50px;
+  border: 1px solid #4C3D42;
+  background: #E5F1E5;
+}
+.main-content .apartamenty #calendar_month .header {
+  color: #fefefe;
+  background: #5fb611;
+  padding: 2px 5px 2px 5px;
+}
+.main-content .apartamenty #calendar_month .day {
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+.main-content .apartamenty #calendar_month .price {
+  float: right;
+  font-size: 11px;
+  font-weight: bold;
+}
+.main-content .apartamenty #calendar_month .state {
+  height: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.main-content .apartamenty #calendar_month .state-1 {
+  border-color: #4DB232;
+}
+.main-content .apartamenty #calendar_month .state-1 .header {
+  background: #4DB232;
+}
+.main-content .apartamenty #calendar_month .state-1 .state {
+  color: #4DB232;
+}
+.main-content .apartamenty #calendar_month .state-2 {
+  border-color: #B02D2D;
+}
+.main-content .apartamenty #calendar_month .state-2 .header {
+  background: #B02D2D;
+}
+.main-content .apartamenty #calendar_month .state-2 .state {
+  color: #B02D2D;
+}
+.main-content .apartamenty #calendar_month .state-3 {
+  border-color: #4C3D42;
+}
+.main-content .apartamenty #calendar_month .state-3 .header {
+  background: #4C3D42;
+}
+.main-content .apartamenty #calendar_month .state-3 .state {
+  color: #4C3D42;
+}
+.main-content .apartamenty .photos {
+  padding: 10px;
+  background-color: #fff !important;
+}
+.main-content .apartamenty #location {
+  background: #fff !important;
+  margin-top: -10px;
+}
+.main-content .apartamenty #location h2 {
+  padding-left: 20px;
+}
+.main-content .apartamenty .apartamentyTitle {
+  font-family: novecento_wide_bookbold;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.main-content .apartamenty .apartament {
+  margin-top: 20px;
+  background: white;
+}
+.main-content .apartamenty .apartament .leftDetails {
+  padding: 20px;
+}
+.main-content .apartamenty .apartament .leftDetails .title {
+  font-family: novecento_wide_bookbold;
+  font-weight: bold;
+  font-size: 24px;
+  color: #cb8916;
+  padding: 10px;
+  border-bottom: 1px solid #dfdacf;
+}
+.main-content .apartamenty .apartament .leftDetails .subtitle {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-style: italic;
+  font-size: 12px;
+  color: #aba18c;
+  border-bottom: 1px solid #dfdacf;
+}
+.main-content .apartamenty .apartament .leftDetails .aboutText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color: #aba18c;
+  font-size: 14px;
+  border-bottom: 1px solid #dfdacf;
+}
+.main-content .apartamenty .apartament .leftDetails .details {
+  border-bottom: 1px solid #dfdacf;
+  padding-bottom: 10px;
+}
+.main-content .apartamenty .apartament .leftDetails .details .liczbapokoi {
+  display: block;
+  margin-top: 1px;
+}
+.main-content .apartamenty .apartament .leftDetails .details .ceny {
+  padding: 10px;
+  background: #f1ece3;
+}
+.main-content .apartamenty .apartament .leftDetails .details .ceny .cenyTitle {
+  font-family: novecento_widenormal;
+  font-size: 22px;
+  color: #7f7f7f;
+}
+.main-content .apartamenty .apartament .leftDetails .details .ceny .sezonWysokiTitle,
+.main-content .apartamenty .apartament .leftDetails .details .ceny .sezonNiskiTitle {
+  color: #666666;
+  font-size: 12px;
+}
+.main-content .apartamenty .apartament .leftDetails .details .ceny .price {
+  font-family: novecento_wide_bookbold;
+  font-weight: bold;
+  font-size: 22px;
+  color: #676767;
+}
+.main-content .apartamenty .apartament .leftDetails .bottomInfo {
+  margin-top: 10px;
+}
+.main-content .apartamenty .apartament .leftDetails .bottomInfo .fromMonte {
+  font-family: "Trebuchet MS";
+  font-size: 14px;
+  color: #aba18c;
+}
+.main-content .apartamenty .apartament .leftDetails .bottomInfo .fromMonte .fromMonteTitle {
+  display: inline-block;
+}
+.main-content .apartamenty .apartament .leftDetails .bottomInfo .fromMonte .fromMonteValue {
+  display: inline-block;
+}
+.main-content .apartamenty .apartament .leftDetails .bottomInfo .fromBeach {
+  font-family: "Trebuchet MS";
+  font-size: 14px;
+  color: #aba18c;
+}
+.main-content .apartamenty .apartament .leftDetails .bottomInfo .fromBeach .fromBeachTitle {
+  display: inline-block;
+}
+.main-content .apartamenty .apartament .leftDetails .bottomInfo .fromBeach .fromBeachValue {
+  display: inline-block;
+}
+.main-content .apartamenty .apartament .leftDetails .bottomInfo .lookup {
+  font-family: novecento_wide_bookbold;
+  font-weight: bold;
+  font-size: 13px;
+  padding-top: 5px;
+  background: url(../img/rezerwuj.png) right no-repeat;
+}
+.main-content .apartamenty .apartament .leftDetails .bottomInfo .lookup a {
+  color: #E1FFDD;
+  padding-left: 30px;
+  text-decoration: none;
+}
+.main-content .apartamenty .apartament .rightDetails {
+  width: 271px;
+  margin-left: -9px;
+}
+.main-content .apartamenty .apartament .rightDetails img {
+  width: 100%;
+  height: 264px;
+}
+.main-content .apartamenty .apartament .rightDetails a {
+  text-decoration: none;
+}
+.main-content .apartamenty .apartament .rightDetails a:hover {
+  text-decoration: none;
+}
+.main-content .apartamenty .apartament .rightDetails .info {
+  background: #cdc6ba;
+  width: 100%;
+  height: 36px;
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+.main-content .apartamenty .apartament .rightDetails .info a {
+  text-decoration: none;
+  color: white;
+}
+.main-content .apartamenty .apartament .rightDetails .info a:hover {
+  color: #f5f5f5;
+}
+.main-content .apartamenty .apartament .rightDetails .info img {
+  width: auto !important;
+  height: auto !important;
+}

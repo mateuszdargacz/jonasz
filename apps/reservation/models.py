@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from adminsortable.models import Sortable
@@ -36,9 +37,9 @@ class Contact(Sortable):
         if self.id:
             old_reservation = Contact.objects.get(pk=self.id)
             if(old_reservation.confirmation_data == False and self.confirmation_data == True):
-                send_mail(u'Confirmation of Data Veriyfication',u'Thanks, your data is beeing processed','APARTAMENTY.PL <RECEPCJA@APARTAMENTY.PL>', [self.client_email_address])
+                send_mail(u'Confirmation of Data Veriyfication',u'Thanks, your data is beeing processed', settings.DEFAULT_FROM_EMAIL, [self.client_email_address, ]+settings.CONTACT_EMAIL_TO)
             if(old_reservation.confirmation_payment == False and self.confirmation_payment == True):
-                send_mail(u'Confirmation of Payment Veriyfication',u'We are waiting for your arrival','APARTAMENTY.PL <RECEPCJA@APARTAMENTY.PL>', [self.client_email_address])
+                send_mail(u'Confirmation of Payment Veriyfication',u'We are waiting for your arrival', settings.DEFAULT_FROM_EMAIL, [self.client_email_address, ] + settings.CONTACT_EMAIL_TO)
         super(Contact, self).save(*args, **kwargs)
 
 
