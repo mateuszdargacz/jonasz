@@ -1,8 +1,6 @@
-{% load  cms_tags menu_tags sekizai_tags i18n thumbnail %}
-{% block HTML %}
+{% load  cms_tags menu_tags sekizai_tags i18n  %}
 <!DOCTYPE html>
-{% endblock %}
-<html lang="en" class="">
+<html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
@@ -92,7 +90,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img id="logo-header" src="{{ STATIC_URL }}img/logo.png" alt="Logo">
+                    <img id="logo-header" src="{{ STATIC_URL }}img/logo1-default.png" alt="Logo">
                 </a>
             </div>
 
@@ -139,7 +137,7 @@
                 </p>
             </div>
             <div class="col-md-3">
-                <a href="#" class="btn-buy hover-effect">{% trans "Order now!" %}</a>
+                <a href="{% url "reservation:contact-form" %}" class="btn-buy hover-effect">{% trans "Order now!" %}</a>
             </div>
         </div>
     </div>
@@ -167,9 +165,7 @@
 {#    </div><!--/container-->#}
 {#</div>#}
 <!-- JS Global Compulsory -->
-
 <script type="text/javascript" src="{{ STATIC_URL }}plugins/jquery-1.10.2.min.js"></script>
-
 <script type="text/javascript" src="{{ STATIC_URL }}plugins/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}plugins/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}plugins/hover-dropdown.min.js"></script>
@@ -187,7 +183,6 @@
 <script type="text/javascript" src="{{ STATIC_URL }}js/app.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/pages/index.js"></script>
 <script src="{{ STATIC_URL }}js/jquery.mixitup.min.js"></script>
-
 {% render_block "js" %}
      {% block extra-js %}{% endblock %}
 

@@ -1,0 +1,16 @@
+[1mdiff --cc templates/base.html[m
+[1mindex d9d1de2,6a0f49e..0000000[m
+[1m--- a/templates/base.html[m
+[1m+++ b/templates/base.html[m
+[36m@@@ -92,7 -90,7 +92,11 @@@[m
+                      <span class="icon-bar"></span>[m
+                  </button>[m
+                  <a class="navbar-brand" href="/">[m
+[32m++<<<<<<< HEAD[m
+[32m +                    <img id="logo-header" src="{{ STATIC_URL }}img/logo.png" alt="Logo">[m
+[32m++=======[m
+[32m+                     <img id="logo-header" src="{{ STATIC_URL }}img/logo1-default.png" alt="Logo">[m
+[32m++>>>>>>> 1f2417e9831c949cddaf2b6405e5299ef9ba5e21[m
+                  </a>[m
+              </div>[m
+  [m

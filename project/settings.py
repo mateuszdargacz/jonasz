@@ -114,12 +114,12 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.language.LanguageCookieMiddleware',
 )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'project.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'project.wsgi.application'
 
-TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT,'templates'))
+TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, 'templates'))
 INSTALLED_APPS = (
     'nested_inlines',
     'django.contrib.auth',
@@ -145,7 +145,10 @@ INSTALLED_APPS = (
     'gmapi',
     'easy_thumbnails',
     'adminsortable',
+    'bootstrapform',
+    'modeltranslation',
     #my apps
+    'apartaments',
     'reservation',
     'cms_plugins.attractions',
     'cms_plugins.slider',
