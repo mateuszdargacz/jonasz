@@ -2,6 +2,7 @@ from django.contrib.admin.options import (ModelAdmin, InlineModelAdmin,
     csrf_protect_m, models, transaction, all_valid,
     PermissionDenied, unquote, escape, Http404, reverse)
 # Fix to make Django 1.5 compatible, maintain backwards compatibility
+
 try:
     from django.contrib.admin.options import force_unicode
 except ImportError:

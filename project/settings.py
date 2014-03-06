@@ -13,7 +13,20 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'agro',                      # Or path to database file if using sqlite3.
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',                      # Empty for localhost through$
+        'PORT': '',
+        'OPTIONS': {
+         "init_command": "SET foreign_key_checks = 0;",
+    },
+    }
 
+}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.4/ref/settings/#allowed-hosts

@@ -3,7 +3,6 @@ MySQL-python==1.2.5
 Pillow==2.3.0
 South==0.8.4
 django-admin-sortable==1.6.5
-django-bootstrap-form==3.1
 django-classy-tags==0.4
 django-cms==2.4.3
 django-gmapi-new==1.0.1.1
