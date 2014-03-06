@@ -1485,3 +1485,8 @@ margin-top: -15px;
     border-radius: 5px !important;
 
 }
+.gmap{
+    -webkit-box-shadow: -1px 0px 30px 10px rgba(85, 147, 50, 0.5);
+    -moz-box-shadow:    -1px 0px 30px 10px rgba(85, 147, 50, 0.5);
+    box-shadow:         -1px 0px 30px 10px rgba(85, 147, 50, 0.5);
+}

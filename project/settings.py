@@ -13,20 +13,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'agro',                      # Or path to database file if using sqlite3.
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',
-        'OPTIONS': {
-         "init_command": "SET foreign_key_checks = 0;",
-    },
-    }
 
-}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.4/ref/settings/#allowed-hosts
@@ -77,7 +64,7 @@ STATIC_URL = '/static/'
 # Additional locations of static files
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT,'static'),
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+   # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
@@ -224,3 +211,10 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'mateuszdargacz'
 EMAIL_HOST_PASSWORD = 'a'
+
+
+
+try:
+    execfile('%s/local_settings.py' % PROJECT_PATH)
+except IOError:
+    pass

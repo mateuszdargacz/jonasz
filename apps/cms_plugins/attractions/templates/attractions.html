@@ -1,9 +1,13 @@
 {% load attractions_tag %}
 
 {% render_map g_map markers as map %}
-<div class="col-md-8 col-md-offset-1">
+<div class="col-md-11 col-md-offset-1 gmap-cont">
+    <br/>
+<div class="col-md-6 col-md-offset-1 ">
     {{ map.map }}
 </div>
+</div>
+
 {{ map.media.js }}
 
 <script type="text/javascript">

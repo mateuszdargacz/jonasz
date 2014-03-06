@@ -14,7 +14,9 @@ framework.
 
 """
 import os
-
+import sys
+sys.path.append('/home/domains/agro')
+sys.path.append('/home/domains/agro/apps')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "agro.project.settings")
 
 # This application object is used by any WSGI server configured to use this

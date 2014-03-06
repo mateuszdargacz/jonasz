@@ -1,5 +1,7 @@
 .idea
 env
+public
+project/local_settings.py
 *.log
 *.pot
 *.pyc
