@@ -225,9 +225,9 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'mateuszdargacz'
 EMAIL_HOST_PASSWORD = 'a'
 
-
+THUMBNAIL_DEBUG = True
 
 try:
-    execfile('%s/local_settings.py' % PROJECT_PATH)
+    execfile('%s/project/local_settings.py' % PROJECT_PATH)
 except IOError:
     pass

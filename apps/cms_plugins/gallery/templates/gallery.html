@@ -22,8 +22,8 @@
                  <li class="mix category_{{ image.size }}">
                     <a class="thumbnail fancybox-button zoomer" data-rel="fancybox-button" title="{{ image.title }}" href="{{ image.image.url }}">
                         <span class="overlay-zoom gallery-image">
-                            <img alt="" src="{% if image.image.width > 500 %}{% thumbnail image.image 350x0  %}{% else %}{% thumbnail image.image 355x197  %}{% endif %}" class="img-responsive">
-                            <div class="zoom-icon"></div>
+                            <img alt="" src="{% if image.image.width > 500 %}{% thumbnail image.image 350x0  %}{% else %}{% thumbnail image.image 355x197  %}{% endif %}" class="img-responsive">                            
+                           <div class="zoom-icon"></div>
                         </span>
                     </a>
                  </li>
