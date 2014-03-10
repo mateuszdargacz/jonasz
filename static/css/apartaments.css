@@ -9,9 +9,7 @@
   max-width: 1600px;
   margin: 0 auto;
   margin-bottom: 30px !important;
-  -webkit-box-shadow: inset 0px -10px 10px -10px #444242;
-  -moz-box-shadow: inset 0px -10px 10px -10px #444242;
-  box-shadow: inset 0px -10px 10px -10px #444242;
+  box-shadow: none!important;
 }
 .main-content .rezerwacja {
   margin: 20px auto;
@@ -58,11 +56,9 @@
 }
 .main-content .rezerwacja .rezerw_content input {
   width: 170px;
-  border: 3px solid #d8cdb8;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  behavior: url(/static/pie/PIE.htc);
 }
 .main-content .rezerwacja .rezerw_content .ui-datepicker-trigger {
   cursor: pointer;
@@ -169,7 +165,6 @@
   font-style: italic;
   font-size: 12px;
   color: #aba18c;
-  border-bottom: 1px solid #dfdacf;
 }
 .main-content .apartamenty .apartament .leftDetails .aboutText {
   margin-top: 10px;

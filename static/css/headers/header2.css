@@ -228,7 +228,7 @@
 	.header .navbar-default .navbar-nav > .open > a:hover,
 	.header .navbar-default .navbar-nav > .open > a:focus {
 		color: #fff;
-		background: #72c02c;		
+		background: #72c02c;
 	}
 
 	/*Dropdown Menu*/
@@ -240,7 +240,7 @@
 		border-radius: 0; 
 		z-index: 9999 !important;
 		margin-top: -2px !important;
-		border-top: solid 2px #72c02c; 
+		border-top: solid 2px #72c02c;
 		border-bottom: solid 2px #687074; 
 	}
 

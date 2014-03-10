@@ -101,7 +101,7 @@
 .header {
 	z-index:999;
 	position:relative;
-	border-bottom:solid 2px #eee;
+    	border-bottom:solid 2px #f5f3f0;
 }
 
 .header .navbar {
@@ -263,7 +263,7 @@
 		border-radius: 0; 
 		z-index: 9999 !important;
 		margin-top: -2px !important; 
-		border-top: solid 2px #72c02c; 
+		border-top: solid 2px #72c02c;
 		border-bottom: solid 2px #687074; 
 	}
 

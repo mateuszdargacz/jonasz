@@ -9,7 +9,7 @@ a:active {
 }
 
 a.read-more:hover { 
-	color:#72c02c; 
+	color:#72c02c;
 }
 
 .linked:hover {
@@ -64,7 +64,7 @@ a.read-more:hover {
 /*Service
 ------------------------------------*/
 .service .service-icon {
-	color:#72c02c;	
+	color:#72c02c;
 }
 
 /*Service Blocks*/
@@ -109,7 +109,7 @@ a.read-more:hover {
 
 /*Blockquote*/
 blockquote:hover {
-	border-left-color:#72c02c; 
+	border-left-color:#72c02c;
 }
 
 .hero {
@@ -139,7 +139,7 @@ blockquote:hover {
 /*Blog Posts
 ------------------------------------*/
 .posts .dl-horizontal a:hover { 
-	color:#72c02c; 
+	color:#72c02c;
 }
 
 .posts .dl-horizontal:hover dt img,
@@ -159,17 +159,17 @@ blockquote:hover {
 ------------------------------------*/
 /*Tabs v1*/
 .tab-v1 .nav-tabs { 
-	border-bottom: solid 2px #72c02c; 	
+	border-bottom: solid 2px #72c02c;
 }
 
 .tab-v1 .nav-tabs > .active > a, 
 .tab-v1 .nav-tabs > .active > a:hover, 
 .tab-v1 .nav-tabs > .active > a:focus { 
-	background: #72c02c; 
+	background: #72c02c;
 }
 
 .tab-v1 .nav-tabs > li > a:hover { 
-	background: #72c02c; 
+	background: #72c02c;
 }
 
 /*Tabs v2*/
@@ -188,10 +188,10 @@ blockquote:hover {
 ------------------------------------*/
 .acc-home a.active,
 .acc-home a.accordion-toggle:hover { 
-	color:#72c02c; 
+	color:#72c02c;
 }
 .acc-home .collapse.in { 
-	border-bottom:solid 1px #72c02c; 
+	border-bottom:solid 1px #72c02c;
 }
 
 /*Testimonials
@@ -282,13 +282,13 @@ blockquote:hover {
 .who li i,
 .who li:hover i, 
 .who li:hover a { 
-	color:#72c02c; 
+	color:#72c02c;
 }
 
 /*Privacy Page
 ------------------------------------*/
 .privacy a:hover {
-	color:#72c02c; 
+	color:#72c02c;
 }
 
 /*Portfolio Page
@@ -334,10 +334,10 @@ ul.blog-tags a:hover {
 /*Blog Latest Tweets*/
 .blog-twitter .blog-twitter-inner:hover {
 	border-color: #72c02c;
-	border-top-color: #72c02c;	
+	border-top-color: #72c02c;
 }
 .blog-twitter .blog-twitter-inner:hover:after {
-	border-top-color: #72c02c;	
+	border-top-color: #72c02c;
 }
 
 .blog-twitter .blog-twitter-inner a {
@@ -422,7 +422,7 @@ ul.blog-tags a:hover {
 }
 
 .fa-icons li:hover i {
-   background: #72c02c; 
+   background: #72c02c;
 }
 
 /*GLYPHICONS Icons Page Style*/

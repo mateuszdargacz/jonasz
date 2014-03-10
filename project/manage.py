@@ -2,7 +2,6 @@
 import os
 import sys
 from os.path import abspath, dirname
-from sys import path
 
 if __name__ == "__main__":
     SITE_ROOT = dirname(dirname(abspath(__file__)))

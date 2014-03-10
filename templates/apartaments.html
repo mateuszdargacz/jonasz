@@ -22,6 +22,8 @@
                 buttonImageOnly: true,
                 showAnim: "slideDown"
             });
+        $("li.active").removeClass("active");
+        $("a[href='/apartaments/']").closest("li").addClass("active");
         });
     </script>
 {% endblock %}
@@ -39,94 +41,106 @@
 {% endblock %}
 
 {% block reservation %}
-<div class="main-content">
+    <div class="main-content">
 
-<div class="purchase">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                    <div class="rezerwacja visible-desktop">
-                <div class="headline"><h2>{% trans "Booking" %}</h2></div>
-                <div class="rezerw_content">
-                    <form action="/{{ LANGUAGE_CODE|lower }}/apartaments/search"
-                          method="GET">
-                        <p>{% trans "Arrival" %}</p>
-                        <input type="text" name="arrival" id="arival"/>
+        <div class="purchase">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="rezerwacja visible-desktop">
+                            <div class="headline"><h2>{% trans "Booking" %}</h2></div>
+                            <div class="rezerw_content">
+                                <form action="/{{ LANGUAGE_CODE|lower }}/apartaments/search"
+                                      method="GET">
+                                    <p>{% trans "Arrival" %}</p>
+                                    <input type="text" name="arrival" id="arival"/>
 
-                        <p>{% trans "Check out" %}</p>
-                        <input type="text" name="comingback"
-                               id="comingback"/>
+                                    <p>{% trans "Check out" %}</p>
+                                    <input type="text" name="comingback"
+                                           id="comingback"/>
 
-                        <div class="col-md-8 form-group" style="margin-left: -15px">
-                            <label class="control-label  " for="id_persons">{% trans "Number of persons" %}</label>
-                            <select class="form-control" id="id_persons" name="persons">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4" selected>4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                        </div>
-                        <div class="clearfix"></div>
+                                    <div class="col-md-8 form-group" style="margin-left: -15px">
+                                        <label class="control-label  "
+                                               for="id_persons">{% trans "Number of persons" %}</label>
+                                        <select class="form-control" id="id_persons" name="persons">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4" selected>4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                    <div class="clearfix"></div>
 
-                        <button class="btn-u btn-u-green" type="submit">
-                            {% trans "check availability" %}
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
-
-            <div class="col-md-9 apartamenty">
-
-                {% for apartament in apartaments %}
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h2>
-                                <a href="{% url "apartaments:apartament_detail" apartament.slug %}">
-                                    <div class="title">{{ apartament.name }}</div>
-                                </a>
-                            </h2>
-                        </div>
-                        <div class="panel-body">
-                            <div class="subtitle">{{ apartament.subtitle }}</div>
-                            <div class="aboutText">{{ apartament.teaserText|truncatechars:121 }}</div>
-                            <div class="span4 liczbapokoi">
-                                <div>{% trans "Rooms" %}: {{ apartament.rooms }}</div>
-                                <div>{% trans "Max people" %}: {{ apartament.maxPeople }}</div>
-                                <div>
-                                    {% trans "Surface" %}: {{ apartament.surface }}
-                                    m2
-                                </div>
-                                {% trans "Prices" %}
-                                {% for price in apartament.price.all %}
-                                    {{ price.price }}<br>{% endfor %}
+                                    <button class="btn-u btn-u-green" type="submit">
+                                        {% trans "check availability" %}
+                                    </button>
+                                </form>
                             </div>
-                        </div>
-                        <div class="panel-footer">
-                            <a class="btn btn-buy"
-                               href="/{{ LANGUAGE_CODE|lower }}/reservation/?name={{ apartament.pk }}{% if start and end %};start={{ start }};end={{ end }}{% endif %}">
-                                <div class="span4 lookup">
-                                    {% trans "Book" %}
-                                </div>
-                            </a>
                         </div>
                     </div>
 
 
+                    <div class="col-md-9 apartamenty">
 
-                {% endfor %}
+                        {% for apartament in apartaments %}
+
+                            <div class=" panel panel-default">
+                                <div class="panel-heading">
+                                    <h2>
+                                        <a href="{% url "apartaments:apartament_detail" apartament.slug %}">
+                                            <div class="title">{{ apartament.name }}</div>
+                                        </a>
+                                    </h2>
+                                    <div class="subtitle">{{ apartament.subtitle }}</div>
+
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+
+                                        <div class="col-md-9">
+                                            <div class="aboutText">{{ apartament.teaserText|truncatechars:121 }}</div>
+                                            <div class="headline"><h2>{% trans "Details" %}</h2></div>
+
+                                            <div class="span4 liczbapokoi">
+                                                <div>{% trans "Rooms" %}: {{ apartament.rooms }}</div>
+                                                <div>{% trans "Max people" %}: {{ apartament.maxPeople }}</div>
+                                                <div>
+                                                    {% trans "Surface" %}: {{ apartament.surface }}
+                                                    m2
+                                                </div>
+                                                {% trans "Prices" %}
+                                                {% for price in apartament.price.all %}
+                                                    {{ price.price }}<br>{% endfor %}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 pull-right">
+                                            <img src="{% thumbnail apartament.teaserPicture 200x300 crop %}" alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <a class="btn btn-buy"
+                                       href="/{{ LANGUAGE_CODE|lower }}/reservation/?name=
+                                               {{ apartament.pk }}{% if start and end %};start={{ start }};end={{ end }}{% endif %}">
+                                        <div class="span4 lookup">
+                                            {% trans "Book" %}
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
 
 
+
+                        {% endfor %}
+
+
+                    </div>
+
+                </div>
             </div>
-
         </div>
     </div>
-    </div>
-</div>
 {% endblock %}
 
