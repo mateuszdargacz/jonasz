@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load cms_tags  menu_tags %}
+{% load cms_tags  menu_tags i18n %}
 
 {% block css %}
 
@@ -12,31 +12,31 @@
 
 {% block content %}
             <div class="headline">
-                <h3>Napisz do nas </h3>
+                <h3>{% trans "Feel free to contact us!" %} </h3>
             </div>
             <div class="contact">
                 <p>
-                    Masz pytanie?  Napisz! a skontaktujemy się z Tobą telefonicznie lub na podany adres e-mail w ciągu 24 godzin.
+                    {% trans "Have a question? Post! and we will contact you by phone or at the following e-mail within 24 hours." %}
                 </p>
                 <form id="contact-form" action="#">
                     <div class="row form">
                         <div class="col-sm-6 row-col">
                             <div class="box">
                                 <div id="name-group" class="form-group">
-                                <input class="name form-control" type="text" name="name" placeholder="Imię i nazwisko">
+                                <input class="name form-control" type="text" name="name" placeholder="{% trans "Your Name" %}">
                                 </div>
                                 <div id="email-group" class="form-group">
-                                <input class="mail form-control" type="text" name="email" placeholder="Adres e-mail">
+                                <input class="mail form-control" type="text" name="email" placeholder="{% trans "E-mail address" %}l">
                                 </div>
                                 <div id="phone-group" class="form-group ">
-                                <input class="phone form-control" type="text" name="phone" placeholder="Numer kontaktowy">
+                                <input class="phone form-control" type="text" name="phone" placeholder="{% trans "Phone number" %}">
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="box">
                                 <div id="message-group" class="form-group">
-                                <textarea name="message"  rows="6" placeholder="Wpisz wiadomość" class="form-control"></textarea>
+                                <textarea name="message"  rows="6" placeholder="{% trans "Write a message" %}" class="form-control"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                     <div class="row submit">
                         <div id="submit-contact" class="col-md-2 pull-right">
                             <br/>
-                            <input  class="btn-u btn-u-green"type="submit" value="Wyślij Wiadomość">
+                            <input  class="btn-u btn-u-green"type="submit" value="{% trans "Send" %}">
                         </div>
                     </div>
                     <div class="clearfix"></div>
