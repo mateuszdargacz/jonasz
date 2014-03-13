@@ -9,10 +9,7 @@
   max-width: 1600px;
   margin: 0 auto;
   margin-bottom: 30px !important;
-  -webkit-box-shadow: inset 0px -10px 10px -10px #444242;
-  -moz-box-shadow: inset 0px -10px 10px -10px #444242;
-  box-shadow: inset 0px -10px 10px -10px #444242;
-}
+
 .mon:after {
 }
 .main-content .rezerwacja {

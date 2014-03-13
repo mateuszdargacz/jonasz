@@ -27,7 +27,6 @@ def render_map(Gmap, markers=None):
             maps.event.addListener(_marker, 'mouseover', 'myobj.markerOver')
             maps.event.addListener(_marker, 'mouseout', 'myobj.markerOut')
             if marker.link:
-
                 info_content = """
                                 <a href="%s"><h2>%s</h2></a>
                                 <p>%s</p>

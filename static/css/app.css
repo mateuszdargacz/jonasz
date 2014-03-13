@@ -891,3 +891,6 @@ i.style-switcher-btn-option:hover {
 .style-switcher li.theme-light {
    background: #ecf0f1;
 }
+.carousel-inner>.active img{
+    margin: auto;
+}
