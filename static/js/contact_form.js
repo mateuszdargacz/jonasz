@@ -75,7 +75,6 @@
                   else if (language === "ru") error_message = "Это поле обязательно.";
 
 
-        alert(language);
         var formFields = ["name","email","phone","message"];
         var name  = $("input[name=name]").val();
         var email = $("input[name=email]").val();
