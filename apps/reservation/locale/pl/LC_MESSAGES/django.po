@@ -34,7 +34,7 @@ msgstr "Proszę podać poprawny adres email"
 
 #: .\fields.py:21
 msgid "The credit card number you entered is invalid."
-msgstr ""
+msgstr "Podany numer karty kredytowej jest niepoprawny."
 
 #: .\fields.py:51
 #, fuzzy
@@ -48,7 +48,7 @@ msgstr "Proszę podać poprawny adres email"
 
 #: .\fields.py:53
 msgid "This expiry date has passed."
-msgstr ""
+msgstr "Za późno"
 
 #: .\fields.py:107
 msgid ""

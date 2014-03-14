@@ -12,17 +12,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <span>Wypocznij w otoczeniu przyrody Agroturystyka „u Marleny”</span>
+                <span>{% placeholder "header" %}</span>
                 <p>
-                    Agroturystyka „u Marleny” to miejsce, gdzie od lat zapewniamy naszym gościom domową i
-                    rodzinną atmosferę. Dokładamy wszelkich starao, aby pobyt u nas był udanym wypoczynkiem,
-                    pełnym spokoju i obcowania z naturą. Oferujemy Paostwu dwa apartamenty w pełni przystosowane
-                    do potrzeb naszych gości, z widokiem na łąki i staw, w malowniczym otoczeniu lasu i jezior. Wszystko
-                    to w miejscu położonym na skraju Borów Tucholskich, zaledwie 2 km od rzeki Wdy.
+                    {% placeholder "description" %}
                 </p>
             </div>
             <div class="col-md-3">
-                <a href="{% url "reservation:contact-form" %}" class="btn-buy hover-effect">{% trans "Order now!" %}</a>
+                <a href="{% url "reservation:contact-form" %}" class="btn-buy hover-effect">{% trans "Booking" %}</a>
             </div>
         </div>
     </div>

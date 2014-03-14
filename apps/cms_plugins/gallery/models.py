@@ -8,7 +8,7 @@ from cms.models import CMSPlugin
 
 CATEGORY_CHOICES = [
     ('1', _("Apartments")),
-    ('2', _("Atractions")),
+    ('2', _("Attractions")),
     ('3', _("Landscape")),
 ]
 

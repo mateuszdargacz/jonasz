@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-14 04:07-0500\n"
+"POT-Creation-Date: 2014-03-14 04:29-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,46 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-
-#: models.py:20
-msgid "teaserText"
-msgstr "Opis"
-
-#: models.py:21
-msgid "Description"
-msgstr "dlugi opis"
-
-#: models.py:23
-msgid "Teaser Picture"
-msgstr "zdjecie reprezentacyjne"
-
-#: models.py:25 models.py:42
-msgid "Published"
-msgstr "Opublikowano"
-
-#: models.py:28
-msgid "Apartament"
-msgstr "Apartament"
-
-#: models.py:29
-msgid "Apartaments"
-msgstr "Apartamenty"
-
-#: models.py:40
-msgid "Gallery"
-msgstr "Galeria"
-
-#: models.py:44 models.py:46 models.py:48
-msgid "Image"
-msgstr "Obrazek"
-
-#: models.py:57
-msgid "Photo"
-msgstr "Zdjecie"
-
-#: models.py:58
-msgid "Photos"
-msgstr "Zdjęcia"
 
 #: apartament.html:82 contact_plugin.html:57 contact_plugin.html.py:61
 msgid "$"
@@ -103,6 +63,9 @@ msgstr "powieszchnia"
 msgid "Prices"
 msgstr "ceny"
 
+#: apartament.html:168
+msgid "Photos"
+msgstr "Zdjęcia"
 
 #: apartament.html:199
 msgid "Availability calendar"
