@@ -8,131 +8,170 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-18 16:51+0200\n"
+"POT-Creation-Date: 2014-03-14 06:08-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: .\cms_plugins.py:17
+#: admin.py:14
+msgid "Confirmation of Data Veriyfication"
+msgstr "Potwierdzenie Danych"
+
+#: admin.py:15
+msgid "Thanks, your data is confirmed. Now we're waiting for payment."
+msgstr "Dziękujemy, Twoje dane zostały potwierdzone. Oczekujemy na wpłatę"
+
+#: admin.py:28
+msgid "Confirmation of Payment Veriyfication"
+msgstr "Potwierdzenie Płatności"
+
+#: admin.py:29
+msgid ""
+"Thanks, We recieved your payment.\n"
+" We are waiting for your arrival!"
+msgstr ""
+"Dziękujemy, otrzymaliśmy Twoją wpłatę.\n"
+"Czekamy na przyjazd!"
+#: admin.py:52
+msgid "Mark selected reservations as data confirmed"
+msgstr "Oznacz rezerwacje jako potwierdzone dane"
+
+#: admin.py:53
+msgid "Mark selected reservations as payment confirmed"
+msgstr "Oznacz rezerwacje jako zapłacone"
+
+#: cms_plugins.py:18
 msgid "reservation form"
 msgstr "formularz rezerwacji"
 
-#: .\cms_plugins.py:41
+#: cms_plugins.py:23 views.py:22
+msgid "Reservation from Agroturystykaumarleny.pl"
+msgstr "Rezerwacja z Agroturystykaumarleny.pl"
+
+#: cms_plugins.py:31
+msgid "Booking confirmation - Agroturystyka u Marleny"
+msgstr "Potwierdzenie rezerwacji - Agroturystyka u Marleny"
+
+#: cms_plugins.py:31 views.py:22
+msgid "Thanks for booking, We will contact you as soon as possible"
+msgstr "Dziękujemy za rezerwację, Skontaktujemy się z Państwem w ciągu 24 godzin"
+
+#: cms_plugins.py:42
 msgid "price calendar"
 msgstr "Kalendarz z cenami"
 
-#: .\fields.py:20
+#: fields.py:20
 #, fuzzy
 msgid "Please enter a credit card number."
 msgstr "Proszę podać poprawny adres email"
 
-#: .\fields.py:21
+#: fields.py:21
 msgid "The credit card number you entered is invalid."
 msgstr "Podany numer karty kredytowej jest niepoprawny."
 
-#: .\fields.py:51
+#: fields.py:51
 #, fuzzy
 msgid "Please enter a valid month."
 msgstr "Proszę podać poprawny adres email"
 
-#: .\fields.py:52
+#: fields.py:52
 #, fuzzy
 msgid "Please enter a valid year."
 msgstr "Proszę podać poprawny adres email"
 
-#: .\fields.py:53
+#: fields.py:53
 msgid "This expiry date has passed."
 msgstr "Za późno"
 
-#: .\fields.py:107
+#: fields.py:107
 msgid ""
 "Please enter the three- or four-digit verification code for your credit card."
 msgstr ""
 
-#: .\fields.py:108
+#: fields.py:108
 msgid "The verification value you entered is invalid."
 msgstr ""
 
-#: .\forms.py:14
+#: forms.py:14
 msgid "Please enter a valid email address."
 msgstr "Proszę podać poprawny adres email"
 
-#: .\models.py:19
+#: models.py:20
 msgid "Apartament"
 msgstr ""
 
-#: .\models.py:20
+#: models.py:21
 msgid "Contact person"
 msgstr "Osoba kontaktowa"
 
-#: .\models.py:21
+#: models.py:22
 msgid "Booking from *"
 msgstr "Rezerwacja od *"
 
-#: .\models.py:22
+#: models.py:23
 msgid "Booking to *"
 msgstr "Rezerwacja do*"
 
-#: .\models.py:23
+#: models.py:24
 msgid "E-mail"
 msgstr "E-mail"
 
-#: .\models.py:25
+#: models.py:26
 msgid "Phone"
 msgstr "Telefon"
 
-#: .\models.py:27
+#: models.py:28
 msgid "I agree to the processing of personal data"
 msgstr "Wyrażam zgodę na przetwarzanie danych osobowych"
 
-#: .\models.py:28
+#: models.py:29
 msgid "Confirmation of data"
-msgstr ""
+msgstr "Potwierdzenie danych"
 
-#: .\models.py:29
+#: models.py:30
 msgid "Confirmation of payment"
-msgstr ""
+msgstr "Potwierdzenie płatności"
 
-#: .\models.py:60
+#: models.py:61
 #, fuzzy
 msgid "calendar"
 msgstr "Kalendarz z cenami"
 
-#: .\models.py:67
+#: models.py:68
 msgid "Free"
 msgstr "Wolny"
 
-#: .\models.py:68
+#: models.py:69
 msgid "Booking"
 msgstr "Rezerwacja"
 
-#: .\models.py:69
+#: models.py:70
 msgid "Unavailable"
 msgstr "Niedostępny"
 
-#: .\models.py:95
+#: models.py:96
 msgid "price"
 msgstr ""
 
-#: .\templates\reservation\contact_plugin.html.py:18
+#: templates/reservation/contact_plugin.html:18
 msgid "Book your apartment"
 msgstr "Zarezerwuj apartament"
 
-#: .\templates\reservation\contact_plugin.html.py:31
+#: templates/reservation/contact_plugin.html:31
 msgid "Send"
 msgstr "Wyślij"
 
-#: .\templates\reservation\contact_plugin.html.py:37
+#: templates/reservation/contact_plugin.html:37
 msgid "Thank you message has been sent"
 msgstr "Dziękujemy wiadomość została wysłana"
 
-#: .\templates\reservation\contact_plugin.html.py:43
+#: templates/reservation/contact_plugin.html:43
 msgid ""
 "If you selected date the apartment is already booked, it will be suggested "
 "to you another closest to date."

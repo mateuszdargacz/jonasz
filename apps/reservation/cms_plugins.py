@@ -20,15 +20,15 @@ class ContactFormPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         request = context['request']
-        
+        subject = _("Reservation from Agroturystykaumarleny.pl")
         form = ContactForm(request.POST or None)
         if form.is_valid():
             obj = form.save()
             # Process the data in form.cleaned_data
-            send_mail(u'Rezerwacja ze strony http://gdynia-magnolia.pl',
+            send_mail(subject,
                       u'Osoba kontaktowa: %s,\nRezerwacja od: %s,\nRezerwacja do: %s,\nAdres e-mail: %s,\nTel.: %s,\nWłaściciel karty: %s, \nData ważności: %s, \nNr kart: %s, \nNr weryfikacyjny: %s' % (obj.last_name, obj.start_date, obj.end_date, obj.client_email_address, obj.phone, obj.name_on_card, obj.expiry_date, obj.card_number, obj.card_code ), settings.DEFAULT_FROM_EMAIL, settings.CONTACT_EMAIL_TO)
             if obj.client_email_address:
-                send_mail(u'Wiadomość ze strony gdynia-magnolia.pl potwierdzenie rezerwacji', u'Dziękujemy za rezerwację. Odpowiemy tak szybko jak to możliwe.', settings.DEFAULT_FROM_EMAIL, [obj.client_email_address])
+                send_mail(_("Booking confirmation - Agroturystyka u Marleny"),_("Thanks for booking, We will contact you as soon as possible")+settings.EMAIL_FOOTER, settings.DEFAULT_FROM_EMAIL, [obj.client_email_address])
             return HttpResponseRedirect('/thanks/') # Redirect after POST
         
         context['form'] = form

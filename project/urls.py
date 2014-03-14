@@ -3,6 +3,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
+from django.views.generic import TemplateView
 
 
 admin.autodiscover()
@@ -16,6 +17,7 @@ urlpatterns = patterns('',
 )+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += i18n_patterns('',
+    url(r'^thanks/$', TemplateView.as_view(template_name='cms/sites/thanks.html')),
     url(r'^reservation/',include('reservation.urls',namespace='reservation')),
     url(r'^apartaments/',include('apartaments.urls',namespace='apartaments')),
     url(r'^', include('cms.urls')),

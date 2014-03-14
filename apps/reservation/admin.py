@@ -1,5 +1,7 @@
+from django.conf import settings
 from django.contrib import admin
 from django.core.mail import send_mail
+from django.utils.translation import ugettext_lazy as _
 
 from reservation.models import Contact, CalendarDay, PriceSettings
 from datetime import date, timedelta as td
@@ -9,8 +11,10 @@ class ContactAdmin(admin.ModelAdmin):
                     'client_email_address', 'phone', 'created_date','confirmation_data','confirmation_payment']
     def data_confirmation(self, request, queryset):
         rows_updated = queryset.update(confirmation_data=True)
+        subject = _("Confirmation of Data Veriyfication")
+        content = _("Thanks, your data is confirmed. Now we're waiting for payment.")+settings.EMAIL_FOOTER
         for obj in queryset:
-            send_mail(u'Confirmation of Data Veriyfication',u'Thanks, your data is beeing processed','APARTAMENTY.PL <RECEPCJA@APARTAMENTY.PL>', [obj.client_email_address])
+            send_mail(subject,content,settings.DEFAULT_FROM_EMAIL, [obj.client_email_address])
         if rows_updated == 1:
             message_bit = "1 reservation data was confirmed"
         else:
@@ -21,6 +25,9 @@ class ContactAdmin(admin.ModelAdmin):
 
     def payment_confirmation(self, request, queryset):
         rows_updated = queryset.update(confirmation_payment=True)
+        subject = _(u'Confirmation of Payment Veriyfication')
+        content = _("Thanks, We recieved your payment.\n We are waiting for your arrival!")+settings.EMAIL_FOOTER
+
         for obj in queryset:
             d1 = obj.start_date
             d2 = obj.end_date
@@ -32,17 +39,18 @@ class ContactAdmin(admin.ModelAdmin):
                 day.date = date
                 day.price = 0
                 day.state = 2
+                print i
                 day.save()
-            send_mail(u'Confirmation of Payment Veriyfication',u'We are waiting for your arrival','APARTAMENTY.PL <RECEPCJA@APARTAMENTY.PL>', [obj.client_email_address])
+            send_mail(subject,content, settings.DEFAULT_FROM_EMAIL, [obj.client_email_address])
         if rows_updated == 1:
             message_bit = "1 reservation payment was confirmed"
         else:
             message_bit = "%s reservation payment were confirmed" % rows_updated
         self.message_user(request, "%s successfully completed." % message_bit)
 
-    actions = ['data_confirmation','payment_confirmation']
-    data_confirmation.short_description = "Mark selected reservations as data confirmed"
-    payment_confirmation.short_description = "Mark selected reservations as payment confirmed"
+    actions = ['data_confirmation' , 'payment_confirmation']
+    data_confirmation.short_description = _("Mark selected reservations as data confirmed")
+    payment_confirmation.short_description = _("Mark selected reservations as payment confirmed")
 
 class CalendarDayAdmin(admin.ModelAdmin):
     list_display = ('apartament', 'date', 'price', 'state')

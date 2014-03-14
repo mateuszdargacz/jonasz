@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="headline">
+                <h3>{% trans "Thanks for booking!" %} </h3>
+            </div>
+            <p>
+                {% trans "We will contact you within 24h. You should recieve an e-mail with payment instructions. Payment will confirm your reservation." %}
+            </p>
+
+        </div>
+    </div>
+
+{% endblock %}

@@ -110,9 +110,9 @@
                                                     {% trans "Surface" %}: {{ apartament.surface }}
                                                     m2
                                                 </div>
-                                                {% trans "Prices" %}
+                                                {% trans "Prices" %}:
                                                 {% for price in apartament.price.all %}
-                                                    {{ price.price }}<br>{% endfor %}
+                                                    {{ price.price }} {% trans "$" %}<br>{% endfor %}
                                             </div>
                                         </div>
                                         <div class="col-md-3 pull-right">
@@ -122,8 +122,7 @@
                                 </div>
                                 <div class="panel-footer">
                                     <a class="btn btn-buy"
-                                       href="/{{ LANGUAGE_CODE|lower }}/reservation/?name=
-                                               {{ apartament.pk }}{% if start and end %};start={{ start }};end={{ end }}{% endif %}">
+                                       href="/{{ LANGUAGE_CODE|lower }}/reservation/?name={{ apartament.pk }}{% if start and end %};start={{ start }};end={{ end }}{% endif %}">
                                         <div class="span4 lookup">
                                             {% trans "Book" %}
                                         </div>

@@ -218,12 +218,13 @@ CMS_SEO_FIELDS=True
 #Emails
 CONTACT_EMAIL_TO = ['mateusz.dargacz@gmail.com']
 #email settings
+EMAIL_FOOTER= u"\n\nMarlena Lipke\nSkórzenno 30\n83 – 221 Osiek\ntel. 58 582 12 91\ntel. kom. 508 144 971\ne-mail: marlena.lipke@wp.pl"
 DEFAULT_FROM_EMAIL = 'Agroturystyka "U Marleny" <mateuszdargacz@gmail.com>'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'mateuszdargacz'
-EMAIL_HOST_PASSWORD = 'a'
+EMAIL_HOST_PASSWORD = '290719900Aa'
 
 THUMBNAIL_DEBUG = True
 

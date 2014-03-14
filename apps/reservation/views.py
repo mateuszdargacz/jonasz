@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 import datetime
-from apartaments.models import Apartament
 from django.conf import settings
-
-from reservation.forms import ContactForm
+from django.utils.translation import ugettext_lazy as _
 from django.http import HttpResponseRedirect, Http404, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail
 
+from apartaments.models import Apartament
+from reservation.forms import ContactForm
 from reservation.models import CalendarDay
 import datetime
 
@@ -17,9 +17,9 @@ def contact(request):
         if form.is_valid(): # All validation rules pass
             obj = form.save()
             # Process the data in form.cleaned_data
-            send_mail(u'Zapytanie ze strony Agroturystykaumarleny.pl', u'Osoba kontaktowa: %s,\nRezerwacja od: %s,\nRezerwacja do: %s,\nAdres e-mail: %s,\nTel.: %s' % (obj.last_name, obj.start_date, obj.end_date, obj.client_email_address, obj.phone ), settings.DEFAULT_FROM_EMAIL, settings.CONTACT_EMAIL_TO)
+            send_mail(u'Rezerwacja ze strony Agroturystykaumarleny.pl', u'Osoba kontaktowa: %s,\nRezerwacja od: %s,\nRezerwacja do: %s,\nAdres e-mail: %s,\nTel.: %s' % (obj.last_name, obj.start_date, obj.end_date, obj.client_email_address, obj.phone ), settings.DEFAULT_FROM_EMAIL, settings.CONTACT_EMAIL_TO)
             if obj.client_email_address:
-                send_mail(u'Wiadomość ze strony gdynia-magnolia.pl potwierdzenie rezerwacji', u'Dziękujemy za rezerwację. Odpowiemy tak szybko jak to możliwe.\nWilla\nMagnolia\nGdynia\n', settings.DEFAULT_FROM_EMAIL, [obj.client_email_address])
+                send_mail(_("Reservation from Agroturystykaumarleny.pl"), _("Thanks for booking, We will contact you as soon as possible")+settings.EMAIL_FOOTER, settings.DEFAULT_FROM_EMAIL, [obj.client_email_address])
 
             return HttpResponseRedirect('/'+request.LANGUAGE_CODE+'/thanks/') # Redirect after POST
         else:
