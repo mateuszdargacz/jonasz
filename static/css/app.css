@@ -38,7 +38,7 @@ a:active {
    outline: 0 !important;
 }
 a:hover {
-   color: #72c02c;
+   color: #ed8703;
    text-decoration: underline;
 }
 
@@ -91,22 +91,22 @@ img.img-circle {
 .pagination > .active > span:hover, 
 .pagination > .active > a:focus, 
 .pagination > .active > span:focus {
-   background-color: #72c02c;
-   border-color: #72c02c;
+   background-color: #ed8703;
+   border-color: #ed8703;
 }
 
 .pagination li a:hover {
    color: #fff;
-   background: #5fb611;
-   border-color: #5fb611;   
+   background: #f19c2d;
+   border-color: #f19c2d;
 }
 
 /*Pager*/
 .pager li > a:hover, 
 .pager li > a:focus {
    color: #fff;
-   background: #5fb611;
-   border-color: #5fb611;   
+   background: #f19c2d;
+   border-color: #f19c2d;
 }
 
 /*Button Styles
@@ -121,14 +121,14 @@ img.img-circle {
    cursor:pointer;
    padding:6px 13px;
    position:relative;
-   background:#72c02c;
+   background:#ed8703;
    display:inline-block;
    color:#fff !important;
    text-decoration:none !important;
 }
 .btn-u:hover {
    color:#fff;
-   background:#5fb611;
+   background:#f19c2d;
    text-decoration:none;
     -webkit-transition:all 0.4s ease-in-out;
     -moz-transition:all 0.4s ease-in-out;
@@ -200,10 +200,10 @@ a.btn-u-lg {
 }
 
 .btn-u-green {
-   background: #2ecc71 !important;
+   background: #f19c2d !important;
 }
 .btn-u-green:hover {
-   background: #27ae60 !important;
+   background: #ed8703 !important;
 }
 
 .btn-u-yellow {
@@ -307,7 +307,7 @@ a.btn-u-lg {
 }
 
 .fa-icons li:hover { 
-   color: #72c02c;
+   color: #ed8703;
 }
 
 .fa-icons li i { 
@@ -319,7 +319,7 @@ a.btn-u-lg {
 }
 .fa-icons li:hover i {
    color: #fff;
-   background: #72c02c;
+   background: #ed8703;
 }
 
 /*Font Awesome Icon Styles*/
@@ -372,9 +372,9 @@ i.icon-color-sea {
    border: solid 1px #1abc9c;
 }
 i.icon-color-green {
-   color: #2ecc71;
+   color: #f19c2d;
    background: none;
-   border: solid 1px #2ecc71;
+   border: solid 1px #f19c2d;
 }
 i.icon-color-yellow {
    color: #f1c40f;
@@ -415,7 +415,7 @@ i.icon-bg-sea {
    background: #1abc9c;
 }
 i.icon-bg-green {
-   background: #2ecc71;
+   background: #f19c2d;
 }
 i.icon-bg-yellow {
    background: #f1c40f;
@@ -456,7 +456,7 @@ Special styles for displaying the icons and their classes*/
    margin: 5px auto 10px;
 }
 .bs-glyphicons li:hover {
-   color: #72c02c;
+   color: #ed8703;
    background-color: #fafafa;
 }
 
@@ -484,9 +484,9 @@ li [class*=" icon-"].icon-lg {
 .color-sea { color:#1abc9c;}
 .color-red { color:#e74c3c;}
 .color-blue { color:#3498db;}
-.color-green { color:#72c02c;}
+.color-green { color:#ed8703;}
 .color-orange { color:#e67e22;}
-.color-green1 { color:#2ecc71;}
+.color-green1 { color:#f19c2d;}
 
 .lft-img-margin { margin:0 20px 5px 0;}
 .rgt-img-margin { margin:0 0 5px 10px;}
@@ -518,13 +518,13 @@ a.read-more {
    text-decoration:none;
 }
 a.read-more:hover { 
-   color:#72c02c;
+   color:#ed8703;
    text-decoration:none;
 }
 
 /*Link color-green-style*/
 .linked:hover {
-   color:#72c02c;
+   color:#ed8703;
    text-decoration:none;
 }
 
@@ -868,7 +868,7 @@ i.style-switcher-btn-option:hover {
 
 .style-switcher a.btn-u-green.active-switcher-btn {
    border: solid 1px #eee;
-   background: #2ecc71 !important;
+   background: #f19c2d !important;
 }
 
 .style-switcher a.btn-u-sea.active-switcher-btn {
@@ -877,7 +877,7 @@ i.style-switcher-btn-option:hover {
 }
 
 .style-switcher li.theme-default {
-   background: #72c02c;
+   background: #ed8703;
 }
 .style-switcher li.theme-blue {
    background: #3498db;

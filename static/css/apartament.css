@@ -128,11 +128,11 @@
   border-collapse: separate;
 }
 .main-content .apartamenty #calendar_month table .month-header {
-  background: #5fb611;
+  background: #f19c2d;
   padding: 10px 10px 5px 10px;
 }
 .main-content .apartamenty #calendar_month table tr.week-row {
-  color: #5fb611;
+  color: #f19c2d;
 }
 .main-content .apartamenty #calendar_month table td {
   padding: 5px 5px;
@@ -167,7 +167,7 @@
 }
 .main-content .apartamenty #calendar_month .header {
   color: #fefefe;
-  background: #5fb611;
+  background: #f19c2d;
   padding: 2px 5px 2px 5px;
 }
 .main-content .apartamenty #calendar_month .day {

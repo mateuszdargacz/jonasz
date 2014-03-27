@@ -17,7 +17,7 @@
 }
 
 .search-blocks p a {
-	color: #72c02c;
+	color: #ed8703;
 }
 
 .search-blocks .search-img li i {
@@ -90,7 +90,7 @@
 
 /*Search Yellow Border Top*/
 .search-blocks-top-yellow {
-	border-top: solid 3px #ffa418;
+	border-top: solid 3px #ed8703;
 }
 
 .search-blocks-top-yellow:hover {
@@ -125,18 +125,18 @@
 
 /*Search Green Border Left*/
 .search-blocks-left-green {
-	border-left: solid 2px #72c02c;
+	border-left: solid 2px #ed8703;
 }
 
 .search-blocks-left-green:hover {
-	border-left-color: #5fb611;
+	border-left-color: #f19c2d;
 }
 
 /*Search Green Border Right*/
 .search-blocks-right-green {
-	border-right: solid 2px #72c02c;
+	border-right: solid 2px #ed8703;
 }
 
 .search-blocks-right-green:hover {
-	border-right-color: #5fb611;
+	border-right-color: #f19c2d;
 }

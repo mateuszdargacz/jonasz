@@ -55,7 +55,7 @@
 }
 
 .blog-post-tags ul.blog-tags a:hover {
-	background: #72c02c;
+	background: #ed8703;
 }
 
 /*Blog Item Page
@@ -69,7 +69,7 @@
 
 .post-comment h3,
 .blog-item .media h3 {
-	color: #72c02c;
+	color: #ed8703;
 	font-size: 21px;
 	margin-bottom: 25px;
 }
@@ -89,7 +89,7 @@
 }
 
 .blog-item .media h4.media-heading span a {
-	color: #72c02c;
+	color: #ed8703;
 }
 
 /*Blog Medium
