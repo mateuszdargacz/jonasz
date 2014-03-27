@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'cms.plugins.picture',
     'cms.plugins.link',
     'cms.plugins.googlemap',
+    'cms.plugins.video',
     'cms.admin',
     #thidparty
     'gmapi',
@@ -224,7 +225,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'mateuszdargacz'
-EMAIL_HOST_PASSWORD = 'a'
+EMAIL_HOST_PASSWORD = ''
 
 THUMBNAIL_DEBUG = True
 

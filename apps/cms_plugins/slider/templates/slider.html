@@ -1,10 +1,11 @@
+{% load slider_tags %}
 <div class="layer_slider">
     <div id="layerslider-container-fw">
         <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto; ">
+            {% randomize_slides slides as slides %}
             {% for slide in slides %}
             <!--First Slide-->
             <div class="ls-layer" style="slidedirection: right; transition2d: 24,25,27,28; ">
-
                 <img src="{{ slide.background.url }}" class="ls-bg" alt="Slide background">
                 {% for obj in slide.slideobj_set.all %}
                     {% if obj.obj_type == "1" %}

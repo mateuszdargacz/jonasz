@@ -1,4 +1,4 @@
-{% load i18n sekizai_tags %}
+{% load i18n sekizai_tags slider_tags %}
 
 {% addtoblock "js" %}
   <script type="text/javascript" src="https://maps-api-ssl.google.com/maps/api/js?v=3&sensor=true"></script>
@@ -51,11 +51,11 @@
         });
         // prepare info window
         var infowindow = new google.maps.InfoWindow({
-            maxWidth: 200,
-            maxHeight: 300,
-            content: "<div style='height: 100px'><strong>" + title + "</strong> \
+            maxWidth: 400,
+            maxHeight: 500,
+            content: "<div style='height: 150px; width: 200px;'><strong>" + title + "</strong> \
                     <br />" + address {% if object.content %} + "<br /> \
-                    <br /><em>{{ object.content }}</em>"{% endif %}+ "</div>"
+                    <br /><em>{% shitty_parse_hack object.content "e-mail" "nr konta" %}</em>"{% endif %}+ "</div>"
 
         });
         // show info window
