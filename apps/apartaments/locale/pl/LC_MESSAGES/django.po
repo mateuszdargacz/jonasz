@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-14 04:07-0500\n"
+"POT-Creation-Date: 2014-04-03 15:57-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,151 +55,169 @@ msgstr "Obrazek"
 msgid "Photo"
 msgstr "Zdjecie"
 
-#: models.py:58
+#: models.py:58 templates/apartament.html:168
 msgid "Photos"
 msgstr "Zdjęcia"
 
-#: apartament.html:82 contact_plugin.html:57 contact_plugin.html.py:61
+#: templates/apartament.html:82 templates/apartament.html.py:162
+#: templates/apartaments.html:147
 msgid "$"
 msgstr "PLN"
 
-#: apartament.html:104 apartaments.html:51 cms/sites/about.html:21
+#: templates/apartament.html:104 templates/apartaments.html:50
 msgid "Booking"
 msgstr "Rezerwacja"
 
-#: apartament.html:108 apartaments.html:55
+#: templates/apartament.html:108 templates/apartaments.html:54
 msgid "Arrival"
 msgstr "od:"
 
-#: apartament.html:111 apartaments.html:58
+#: templates/apartament.html:111 templates/apartaments.html:57
 msgid "Check out"
 msgstr "do:"
 
-#: apartament.html:116 apartaments.html:64
+#: templates/apartament.html:116 templates/apartaments.html:63
 msgid "Number of persons"
 msgstr "Liczba osób"
 
-#: apartament.html:129 apartaments.html:77
+#: templates/apartament.html:129 templates/apartaments.html:76
 msgid "check availability"
 msgstr "Sprawdź dostępność"
 
-#: apartament.html:153 apartaments.html:104
+#: templates/apartament.html:153 templates/apartaments.html:136
 msgid "Details"
 msgstr "Szczegóły"
 
-#: apartament.html:154 apartaments.html:107
+#: templates/apartament.html:154 templates/apartaments.html:139
 msgid "Rooms"
 msgstr "Pokoje"
 
-#: apartament.html:155 apartaments.html:108
+#: templates/apartament.html:155 templates/apartaments.html:140
 msgid "Max people"
 msgstr "Ilość osób"
 
-#: apartament.html:157 apartaments.html:110
+#: templates/apartament.html:157 templates/apartaments.html:142
 msgid "Surface"
 msgstr "powieszchnia"
 
-#: apartament.html:160 apartaments.html:113
+#: templates/apartament.html:160 templates/apartaments.html:98
+#: templates/apartaments.html.py:145
 msgid "Prices"
-msgstr "ceny"
+msgstr "Ceny"
 
-
-#: apartament.html:199
+#: templates/apartament.html:199
 msgid "Availability calendar"
 msgstr "Kalendarz dostępności"
 
-#: apartaments.html:128
+#: templates/apartament.html:212 templates/apartaments.html:160
 msgid "Book"
 msgstr "Zarezerwuj"
 
-#: contact_plugin.html:18
-msgid "Book your apartment"
-msgstr "Zarezerwuj apartament"
+#: templates/apartaments.html:92
+msgid "Pricing"
+msgstr "Cennik"
 
-#: contact_plugin.html:31 cms/sites/contact.html:48
-msgid "Send"
-msgstr "Wyślij"
+#: templates/apartaments.html:94
+msgid "Both apartments(max 10 people): 250 PLN"
+msgstr "Oba apartament (max 10 osób): 250 PLN"
 
-#: contact_plugin.html:37
-msgid "Thank you message has been sent"
-msgstr "Dziękujemy. Twoja wiadomość została wysłana"
+#: templates/apartaments.html:95
+msgid "Extra double bed: 50 PLN"
+msgstr "Dodatkowe łóżko dla dwóch osób: 50 PLN"
 
-#: contact_plugin.html:43
+#: templates/apartaments.html:97
 msgid ""
-"If you selected date the apartment is already booked, it will be suggested "
-"to you another closest to date."
+"During your stay, enjoy the homemade meals prepared with the greatest care, "
+"in accordance with the tastes of our guests."
 msgstr ""
-"Jeśli wybrałeś zajęty termin, zasugerujemy "
-"najbliższy wolny."
+"Podczas pobytu zapraszamy również na domowe posiłki przygotowane z największą starannością,"
+"zgodnie z gustami naszych gości."
 
-#: contact_plugin.html:51
-msgid "From"
-msgstr "od"
+#: templates/apartaments.html:102
+msgid "Breakfast: 12-15 PLN"
+msgstr "Śniadania: 12 – 15 zł"
 
-#: contact_plugin.html:52
-msgid "To"
-msgstr "do"
+#: templates/apartaments.html:103
+msgid "Dinner: 20 – 25 zł"
+msgstr "Obiad lub obiadokolacja: 20 – 25 zł"
 
-#: contact_plugin.html:53
-msgid "Duration"
-msgstr "Czas trwania"
-
-#: contact_plugin.html:54
-msgid "Price of accommodation"
-msgstr "Cena zakwaterowania"
-
-#: contact_plugin.html:55
-msgid "HIGH SEASON"
-msgstr "Wysoki sezon"
-
-#: contact_plugin.html:59
-msgid "LOW SEASON"
-msgstr "Niski sezon"
-
-#: cms/plugins/googlemap.html:69
-msgid "Our location"
-msgstr "Lokalizacja"
-
-#: cms/plugins/googlemap.html:84
-msgid "Your address: "
-msgstr "Twój adres: "
-
-#: cms/plugins/googlemap.html:85
-msgid "Calculate route"
-msgstr "Oblicz trasę"
-
-#: cms/sites/atractions.html:13
-msgid "Attractions"
-msgstr "Atrakcje"
-
-#: cms/sites/contact.html:15
-msgid "Feel free to contact us!"
-msgstr "Napisz do nas!"
-
-#: cms/sites/contact.html:19
+#: templates/apartaments.html:104
 msgid ""
-"Have a question? Post! and we will contact you by phone or at the following "
-"e-mail within 24 hours."
+"(2 dishes and homemade cake, the price to be agreed with the guests, "
+"depending on the selected courses)"
 msgstr ""
-"Masz pytanie? Napisz! Skontaktujemy się na podany numer telefonu lub"
-"adres e-mail w ciągu 24 godzin."
+"2 dania oraz domowe ciasto; cena do uzgodnienia z gośćmi "
+"zależności od wybranych dań)"
+#: templates/apartaments.html:116
+#, fuzzy
+msgid "Apartments"
+msgstr "Apartamenty"
 
-#: cms/sites/contact.html:26
-msgid "Your Name"
-msgstr "Imie i Nazwisko"
+#~ msgid "Book your apartment"
+#~ msgstr "Zarezerwuj apartament"
 
-#: cms/sites/contact.html:29
-msgid "E-mail address"
-msgstr "Adres e-mail"
+#~ msgid "Send"
+#~ msgstr "Wyślij"
 
-#: cms/sites/contact.html:32
-msgid "Phone number"
-msgstr "Numer telefonu"
+#~ msgid "Thank you message has been sent"
+#~ msgstr "Dziękujemy. Twoja wiadomość została wysłana"
 
-#: cms/sites/contact.html:39
-msgid "Write a message"
-msgstr "Napisz wiadomość"
+#~ msgid ""
+#~ "If you selected date the apartment is already booked, it will be "
+#~ "suggested to you another closest to date."
+#~ msgstr "Jeśli wybrałeś zajęty termin, zasugerujemy najbliższy wolny."
 
-#: cms/sites/surroundings.html:14
-msgid "Worth seeing"
-msgstr "Warto zobaczyć"
+#~ msgid "From"
+#~ msgstr "od"
+
+#~ msgid "To"
+#~ msgstr "do"
+
+#~ msgid "Duration"
+#~ msgstr "Czas trwania"
+
+#~ msgid "Price of accommodation"
+#~ msgstr "Cena zakwaterowania"
+
+#~ msgid "HIGH SEASON"
+#~ msgstr "Wysoki sezon"
+
+#~ msgid "LOW SEASON"
+#~ msgstr "Niski sezon"
+
+#~ msgid "Our location"
+#~ msgstr "Lokalizacja"
+
+#~ msgid "Your address: "
+#~ msgstr "Twój adres: "
+
+#~ msgid "Calculate route"
+#~ msgstr "Oblicz trasę"
+
+#~ msgid "Attractions"
+#~ msgstr "Atrakcje"
+
+#~ msgid "Feel free to contact us!"
+#~ msgstr "Napisz do nas!"
+
+#~ msgid ""
+#~ "Have a question? Post! and we will contact you by phone or at the "
+#~ "following e-mail within 24 hours."
+#~ msgstr ""
+#~ "Masz pytanie? Napisz! Skontaktujemy się na podany numer telefonu lubadres "
+#~ "e-mail w ciągu 24 godzin."
+
+#~ msgid "Your Name"
+#~ msgstr "Imie i Nazwisko"
+
+#~ msgid "E-mail address"
+#~ msgstr "Adres e-mail"
+
+#~ msgid "Phone number"
+#~ msgstr "Numer telefonu"
+
+#~ msgid "Write a message"
+#~ msgstr "Napisz wiadomość"
+
+#~ msgid "Worth seeing"
+#~ msgstr "Warto zobaczyć"

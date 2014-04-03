@@ -21,8 +21,8 @@
                 buttonImageOnly: true,
                 showAnim: "slideDown"
             });
-        $("li.active").removeClass("active");
-        $("a[href='/apartaments/']").closest("li").addClass("active");
+            $("li.active").removeClass("active");
+            $("a[href='/apartaments/']").closest("li").addClass("active");
         });
     </script>
 {% endblock %}
@@ -83,6 +83,39 @@
 
                     <div class="col-md-9 apartamenty">
 
+                        <div class=" panel panel-default">
+                                <div class="panel-heading">
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="headline"><h2>{% trans "Pricing" %}</h2></div>
+                                            <div class="span4 liczbapokoi">
+                                                <div>{% trans "Both apartments(max 10 people): 250 PLN" %},</div>
+                                                <div>{% trans "Extra double bed: 50 PLN" %},</div>
+                                                <div><br/><br/>
+                                                    {% trans "During your stay, enjoy the homemade meals prepared with the greatest care, in accordance with the tastes of our guests." %}
+                                                                                                {% trans "Prices" %}:
+
+                                                </div>
+                                                <br/>
+                                                <div>{% trans "Breakfast: 12-15 PLN" %},</div>
+                                                <div>{% trans "Dinner: 20 – 25 zł" %},</div>
+                                                <div>{% trans "(2 dishes and homemade cake, the price to be agreed with the guests, depending on the selected courses)" %},</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+
+                                </div>
+                            </div>
+                            <div class="headline">
+                                <h2>
+                                {% trans "Apartments" %}
+                                </h2>
+                            </div>
                         {% for apartament in apartaments %}
 
                             <div class=" panel panel-default">
@@ -121,7 +154,8 @@
                                 </div>
                                 <div class="panel-footer">
                                     <a class="btn btn-buy"
-                                       href="/{{ LANGUAGE_CODE|lower }}/reservation/?name={{ apartament.pk }}{% if start and end %};start={{ start }};end={{ end }}{% endif %}">
+                                       href="/{{ LANGUAGE_CODE|lower }}/reservation/?name=
+                                               {{ apartament.pk }}{% if start and end %};start={{ start }};end={{ end }}{% endif %}">
                                         <div class="span4 lookup">
                                             {% trans "Book" %}
                                         </div>

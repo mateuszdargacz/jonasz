@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load cms_tags  menu_tags %}
+{% load thumbnail sekizai_tags gallery_tags i18n cms_tags menu_tags %}
 
 {% block css %}
 
@@ -9,5 +9,10 @@
 {% endblock %}
 
 {% block content %}
-{% placeholder "galeria" %}
+<div class="col-md-10 col-md-offset-1">
+<div class="headline"><h2>{% trans "Our gallery" %}</h2></div>
+{% placeholder "glaria_video" %}
+</div>
+
+    {% placeholder "galeria" %}
 {% endblock %}

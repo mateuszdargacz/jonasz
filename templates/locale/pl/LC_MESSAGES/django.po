@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-14 04:29-0500\n"
+"POT-Creation-Date: 2014-04-03 15:51-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,47 +19,48 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: apartament.html:82 contact_plugin.html:57 contact_plugin.html.py:61
+#: apartament.html:82 apartament.html.py:162 apartaments.html:147
+#: contact_plugin.html:57 contact_plugin.html.py:61
 msgid "$"
 msgstr "PLN"
 
-#: apartament.html:104 apartaments.html:51 cms/sites/about.html:21
+#: apartament.html:104 apartaments.html:50 cms/sites/about.html:21
 msgid "Booking"
 msgstr "Rezerwacja"
 
-#: apartament.html:108 apartaments.html:55
+#: apartament.html:108 apartaments.html:54
 msgid "Arrival"
 msgstr "od:"
 
-#: apartament.html:111 apartaments.html:58
+#: apartament.html:111 apartaments.html:57
 msgid "Check out"
 msgstr "do:"
 
-#: apartament.html:116 apartaments.html:64
+#: apartament.html:116 apartaments.html:63
 msgid "Number of persons"
 msgstr "Liczba osób"
 
-#: apartament.html:129 apartaments.html:77
+#: apartament.html:129 apartaments.html:76
 msgid "check availability"
 msgstr "Sprawdź dostępność"
 
-#: apartament.html:153 apartaments.html:104
+#: apartament.html:153 apartaments.html:136
 msgid "Details"
 msgstr "Szczegóły"
 
-#: apartament.html:154 apartaments.html:107
+#: apartament.html:154 apartaments.html:139
 msgid "Rooms"
 msgstr "Pokoje"
 
-#: apartament.html:155 apartaments.html:108
+#: apartament.html:155 apartaments.html:140
 msgid "Max people"
 msgstr "Ilość osób"
 
-#: apartament.html:157 apartaments.html:110
+#: apartament.html:157 apartaments.html:142
 msgid "Surface"
 msgstr "powieszchnia"
 
-#: apartament.html:160 apartaments.html:113
+#: apartament.html:160 apartaments.html:98 apartaments.html.py:145
 msgid "Prices"
 msgstr "ceny"
 
@@ -71,9 +72,46 @@ msgstr "Zdjęcia"
 msgid "Availability calendar"
 msgstr "Kalendarz dostępności"
 
-#: apartaments.html:128
+#: apartament.html:212 apartaments.html:160
 msgid "Book"
 msgstr "Zarezerwuj"
+
+#: apartaments.html:92
+#, fuzzy
+msgid "Pricing"
+msgstr "ceny"
+
+#: apartaments.html:94
+msgid "Both apartments(max 10 people): 250 PLN"
+msgstr ""
+
+#: apartaments.html:95
+msgid "Extra bed for 2 persons: 50 PLN"
+msgstr ""
+
+#: apartaments.html:97
+msgid ""
+"During your stay, enjoy the homemade meals prepared with the greatest care, "
+"in accordance with the tastes of our guests."
+msgstr ""
+
+#: apartaments.html:102
+msgid "Breakfast: 12-15 PLN"
+msgstr ""
+
+#: apartaments.html:103
+msgid "Dinner: 20 – 25 zł"
+msgstr ""
+
+#: apartaments.html:104
+msgid ""
+"(2 dishes and homemade cake, the price to be agreed with the guests, "
+"depending on the selected courses)"
+msgstr ""
+
+#: apartaments.html:116
+msgid "Apartments"
+msgstr ""
 
 #: contact_plugin.html:18
 msgid "Book your apartment"
@@ -91,9 +129,7 @@ msgstr "Dziękujemy. Twoja wiadomość została wysłana"
 msgid ""
 "If you selected date the apartment is already booked, it will be suggested "
 "to you another closest to date."
-msgstr ""
-"Jeśli wybrałeś zajęty termin, zasugerujemy "
-"najbliższy wolny."
+msgstr "Jeśli wybrałeś zajęty termin, zasugerujemy najbliższy wolny."
 
 #: contact_plugin.html:51
 msgid "From"
@@ -131,7 +167,7 @@ msgstr "Twój adres: "
 msgid "Calculate route"
 msgstr "Oblicz trasę"
 
-#: cms/sites/atractions.html:13
+#: cms/sites/atractions.html:17
 msgid "Attractions"
 msgstr "Atrakcje"
 
@@ -144,8 +180,8 @@ msgid ""
 "Have a question? Post! and we will contact you by phone or at the following "
 "e-mail within 24 hours."
 msgstr ""
-"Masz pytanie? Napisz! Skontaktujemy się na podany numer telefonu lub"
-"adres e-mail w ciągu 24 godzin."
+"Masz pytanie? Napisz! Skontaktujemy się na podany numer telefonu lubadres e-"
+"mail w ciągu 24 godzin."
 
 #: cms/sites/contact.html:26
 msgid "Your Name"
@@ -163,6 +199,24 @@ msgstr "Numer telefonu"
 msgid "Write a message"
 msgstr "Napisz wiadomość"
 
+#: cms/sites/gallery.html:13
+msgid "Our gallery"
+msgstr ""
+
 #: cms/sites/surroundings.html:14
+msgid "Surroundings"
+msgstr ""
+
+#: cms/sites/surroundings.html:21
 msgid "Worth seeing"
 msgstr "Warto zobaczyć"
+
+#: cms/sites/thanks.html:7
+msgid "Thanks for booking!"
+msgstr ""
+
+#: cms/sites/thanks.html:10
+msgid ""
+"We will contact you within 24h. You should recieve an e-mail with payment "
+"instructions. Payment will confirm your reservation."
+msgstr ""
