@@ -53,7 +53,6 @@ def month_calendar(request, year, month, slug):
         month = datetime.date(year=int(year), month=int(month), day=1)
     except ValueError:
         raise Http404
-    print slug
     get_object_or_404(Apartament,slug=slug)
     return HttpResponse(
         CalendarDay.objects.get_html_calendar(month.year, month.month, slug))

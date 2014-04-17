@@ -24,6 +24,7 @@ def ajaxContactForm(request):
                                                               'email'  : email,
                                                               'phone'  : phone,
                                                               'message': message})
+            print "pre-sent"
             mail = EmailMessage(subject,
                             message_to_user,
                             settings.DEFAULT_FROM_EMAIL,
@@ -32,6 +33,7 @@ def ajaxContactForm(request):
 
             mail.content_subtype = "html"
             mail.send()
+            print "sent"
             context ={
                 'done': True,
                 'message': u'Twoja wiadomość została wysłana',
