@@ -170,7 +170,7 @@
                         <div class="carousel-inner" style="text-align: center">
                             {% for photos in listOfPhotos %}
                                 {% if photos.imageField1 %}
-                                    <div class="item active">
+                                    <div class="item {% if photos.template == "1" %}active{% endif %}">
                                         <img src="{% thumbnail photos.imageField1 970x400 %}">
                                     </div>
                                 {% endif %}
