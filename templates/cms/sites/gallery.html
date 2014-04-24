@@ -9,10 +9,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="col-md-10 col-md-offset-1">
-<div class="headline"><h2>{% trans "Our gallery" %}</h2></div>
-{% placeholder "glaria_video" %}
-<div class="spacer"></div>
+<div class="col-md-12 ">
+    <div class="headline"><h2>{% trans "Our gallery" %}</h2></div>
+    <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+    {% placeholder "glaria_video" %}
+    </div>
+    </div>
+    <div class="spacer"></div>
     {% placeholder "galeria" %}
 </div>
 
