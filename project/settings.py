@@ -217,7 +217,7 @@ CMS_REDIRECTS=True
 CMS_SEO_FIELDS=True
 
 #Emails
-CONTACT_EMAIL_TO = ['mateusz.dargacz@gmail.com']
+CONTACT_EMAIL_TO = ['marlena.lipke@wp.pl', 'mateuszdargacz@gmail.com']
 #email settings
 EMAIL_FOOTER= u"\n\nMarlena Lipke\nSkórzenno 30\n83 – 221 Osiek\ntel. 58 582 12 91\ntel. kom. 508 144 971\ne-mail: marlena.lipke@wp.pln\nNumer konta: 95 1240 1242 1111 0000 1586 2059"
 DEFAULT_FROM_EMAIL = 'Agroturystyka "U Marleny" <mateuszdargacz@agroturystykaumarleny.pl>'
