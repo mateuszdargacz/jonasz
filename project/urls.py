@@ -10,6 +10,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^ajax/',include('cms_plugins.contact_form.urls', namespace='ajax')),
+    url(r'^zohoverify/verifyforzoho.html$', TemplateView.as_view(template_name='verify/verifyforzoho.html')),
+
     url(r'^jsi18n/(?P<packages>\S+?)/$', 'django.views.i18n.javascript_catalog'),
     url(r'^admin/', include(admin.site.urls)),
 

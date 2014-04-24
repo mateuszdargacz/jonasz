@@ -24,27 +24,27 @@ msgstr ""
 
 #: forms.py:13 models.py:37
 msgid "Object type"
-msgstr ""
+msgstr "Typ des Objekts"
 
 #: forms.py:14 models.py:38
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: forms.py:15 models.py:39
 msgid "Button"
-msgstr ""
+msgstr "Knopf"
 
 #: forms.py:16 models.py:40 models.py:46
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: forms.py:17 models.py:41
 msgid "List text"
-msgstr ""
+msgstr "Liste der text"
 
 #: forms.py:26 forms.py:28 forms.py:30
 msgid "This field is required."
-msgstr ""
+msgstr "Dieses Feld ist erforderlich"
 
 #: models.py:26
 msgid "Sliders"
@@ -52,7 +52,7 @@ msgstr ""
 
 #: models.py:30
 msgid "Slider background"
-msgstr ""
+msgstr "Folienhintergrund"
 
 #: models.py:33 models.py:44
 msgid "Slide"
@@ -64,31 +64,31 @@ msgstr ""
 
 #: models.py:45
 msgid "image"
-msgstr ""
+msgstr "Bild"
 
 #: models.py:47
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 #: models.py:48
 msgid "Link name"
-msgstr ""
+msgstr "Name der Link"
 
 #: models.py:49
 msgid "Vertical location"
-msgstr ""
+msgstr "vertikale position"
 
 #: models.py:50
 msgid "space from top"
-msgstr ""
+msgstr "Abstand von der Oberseite"
 
 #: models.py:51
 msgid "horizontal location"
-msgstr ""
+msgstr "horizontale Position"
 
 #: models.py:52
 msgid "space from left"
-msgstr ""
+msgstr "Abstand vom linken"
 
 #: models.py:56
 msgid "Slide object"

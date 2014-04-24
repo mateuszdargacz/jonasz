@@ -58,7 +58,7 @@
     }
     function addLoader(){
         var html = '<div id="ajax_loader" class="col-sm-12">'+
-           '<img width="100%" height="30px" src="{{ STATIC_URL }}img/ajax/message_loader.gif" alt="Trwa wysyłanie..."/>'+
+           '<img width="100%" height="30px" src="/static/img/ajax/message_loader.gif" alt="Trwa wysyłanie..."/>'+
            '</div>';
         $("#submit-contact").before(html);
     }

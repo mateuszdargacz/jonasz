@@ -20,11 +20,11 @@ msgstr ""
 
 #: cms_plugins.py:10
 msgid "GoogleMap"
-msgstr ""
+msgstr "Google Map"
 
 #: models.py:11
 msgid "Hybrid"
-msgstr ""
+msgstr "Hybrid"
 
 #: models.py:12
 msgid "Road map"
@@ -44,11 +44,11 @@ msgstr ""
 
 #: models.py:26 models.py:42
 msgid "Latitude"
-msgstr ""
+msgstr "geographische Breite"
 
 #: models.py:27 models.py:43
 msgid "Longitude"
-msgstr ""
+msgstr "geographische Länge"
 
 #: models.py:28
 msgid "Zoom"
@@ -56,36 +56,42 @@ msgstr ""
 
 #: models.py:29
 msgid "Map type"
-msgstr ""
+msgstr "Art der Karte"
 
 #: models.py:35
 msgid "Google Map"
-msgstr ""
+msgstr "Google Map"
 
 #: models.py:36
 msgid "Google Maps"
-msgstr ""
+msgstr "Google Maps"
 
 #: models.py:40
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #: models.py:41
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: models.py:44
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: models.py:45
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 #: models.py:47
 msgid "Marker"
-msgstr ""
+msgstr "Punkt auf der Karte"
 
 #: models.py:48
 msgid "Markers"
-msgstr ""
+msgstr "Punkte auf der Karte"
+
+msgid "Surroundings"
+msgstr "Umgebung"
+
+msgid "Our gallery"
+msgstr "unserer Galerie"

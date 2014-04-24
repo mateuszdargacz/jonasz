@@ -20,40 +20,40 @@ msgstr ""
 
 #: cms_plugins.py:10 models.py:27 models.py:31
 msgid "Gallery"
-msgstr ""
+msgstr "Galerie"
 
 #: models.py:10
 msgid "Apartments"
-msgstr ""
+msgstr "Apartments"
 
 #: models.py:11
 msgid "Atractions"
-msgstr ""
+msgstr "Attraktionen"
 
 #: models.py:12
 msgid "Landscape"
-msgstr ""
+msgstr "Landschaft"
 
 #: models.py:28
 msgid "Galleries"
-msgstr ""
+msgstr "Galerien"
 
 #: models.py:32
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #: models.py:33 models.py:37
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: models.py:34
 msgid "Category"
-msgstr ""
+msgstr "Kategorie"
 
 #: models.py:38
 msgid "Images"
-msgstr ""
+msgstr "Bilder"
 
 #: templates/gallery.html:8
 msgid "All"
-msgstr ""
+msgstr "Alle"

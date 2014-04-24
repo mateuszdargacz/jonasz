@@ -20,40 +20,40 @@ msgstr ""
 
 #: models.py:20
 msgid "teaserText"
-msgstr ""
+msgstr "Beschreibung"
 
 #: models.py:21
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: models.py:23
 msgid "Teaser Picture"
-msgstr ""
+msgstr "Bilddarstellung"
 
 #: models.py:25 models.py:42
 msgid "Published"
-msgstr ""
+msgstr "veröffentlicht"
 
 #: models.py:28
 msgid "Apartament"
-msgstr ""
+msgstr "Appartement"
 
 #: models.py:29
 msgid "Apartaments"
-msgstr ""
+msgstr "Apartments"
 
 #: models.py:40
 msgid "Gallery"
-msgstr ""
+msgstr "Galerie"
 
 #: models.py:44 models.py:46 models.py:48
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: models.py:57
 msgid "Photo"
-msgstr ""
+msgstr "Foto"
 
 #: models.py:58
 msgid "Photos"
-msgstr ""
+msgstr "Fotos"
