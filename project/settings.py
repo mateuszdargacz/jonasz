@@ -220,12 +220,11 @@ CMS_SEO_FIELDS=True
 CONTACT_EMAIL_TO = ['marlena.lipke@wp.pl', 'mateuszdargacz@gmail.com']
 #email settings
 EMAIL_FOOTER= u"\n\nMarlena Lipke\nSkórzenno 30\n83 – 221 Osiek\ntel. 58 582 12 91\ntel. kom. 508 144 971\ne-mail: marlena.lipke@wp.pln\nNumer konta: 95 1240 1242 1111 0000 1586 2059"
-DEFAULT_FROM_EMAIL = 'Agroturystyka "U Marleny" <mateuszdargacz@agroturystykaumarleny.pl>'
+DEFAULT_FROM_EMAIL = 'Agroturystyka "U Marleny" <rezerwacja@agroturystykaumarleny.pl>'
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'ssrs.reachmail.net'
+EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'marianus\\admin'
-THUMBNAIL_DEBUG = True
+EMAIL_HOST_USER = 'rezerwacja@agroturystykaumarleny.pl'
 
 try:
     execfile('%s/project/local_settings.py' % PROJECT_PATH)
