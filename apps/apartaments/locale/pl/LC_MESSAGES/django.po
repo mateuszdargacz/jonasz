@@ -152,72 +152,112 @@ msgstr ""
 #, fuzzy
 msgid "Apartments"
 msgstr "Apartamenty"
+#: contact_plugin.html:18
+msgid "Book your apartment"
+msgstr "Zarezerwuj apartament"
 
-#~ msgid "Book your apartment"
-#~ msgstr "Zarezerwuj apartament"
+#: contact_plugin.html:31 cms/sites/contact.html:48
+msgid "Send"
+msgstr "Wyślij"
 
-#~ msgid "Send"
-#~ msgstr "Wyślij"
+#: contact_plugin.html:37
+msgid "Thank you message has been sent"
+msgstr "Dziękujemy. Twoja wiadomość została wysłana"
 
-#~ msgid "Thank you message has been sent"
-#~ msgstr "Dziękujemy. Twoja wiadomość została wysłana"
+#: contact_plugin.html:43
+msgid ""
+"If you selected date the apartment is already booked, it will be suggested "
+"to you another closest to date."
+msgstr "Jeśli wybrałeś zajęty termin, zasugerujemy najbliższy wolny."
 
-#~ msgid ""
-#~ "If you selected date the apartment is already booked, it will be "
-#~ "suggested to you another closest to date."
-#~ msgstr "Jeśli wybrałeś zajęty termin, zasugerujemy najbliższy wolny."
+#: contact_plugin.html:51
+msgid "From"
+msgstr "od"
 
-#~ msgid "From"
-#~ msgstr "od"
+#: contact_plugin.html:52
+msgid "To"
+msgstr "do"
 
-#~ msgid "To"
-#~ msgstr "do"
+#: contact_plugin.html:53
+msgid "Duration"
+msgstr "Czas trwania"
 
-#~ msgid "Duration"
-#~ msgstr "Czas trwania"
+#: contact_plugin.html:54
+msgid "Price of accommodation"
+msgstr "Cena zakwaterowania"
 
-#~ msgid "Price of accommodation"
-#~ msgstr "Cena zakwaterowania"
+#: contact_plugin.html:55
+msgid "HIGH SEASON"
+msgstr "Wysoki sezon"
 
-#~ msgid "HIGH SEASON"
-#~ msgstr "Wysoki sezon"
+#: contact_plugin.html:59
+msgid "LOW SEASON"
+msgstr "Niski sezon"
 
-#~ msgid "LOW SEASON"
-#~ msgstr "Niski sezon"
+#: cms/plugins/googlemap.html:69
+msgid "Our location"
+msgstr "Lokalizacja"
 
-#~ msgid "Our location"
-#~ msgstr "Lokalizacja"
+#: cms/plugins/googlemap.html:84
+msgid "Your address: "
+msgstr "Twój adres: "
 
-#~ msgid "Your address: "
-#~ msgstr "Twój adres: "
+#: cms/plugins/googlemap.html:85
+msgid "Calculate route"
+msgstr "Oblicz trasę"
 
-#~ msgid "Calculate route"
-#~ msgstr "Oblicz trasę"
+#: cms/sites/atractions.html:17
+msgid "Attractions"
+msgstr "Atrakcje"
 
-#~ msgid "Attractions"
-#~ msgstr "Atrakcje"
+#: cms/sites/contact.html:15
+msgid "Feel free to contact us!"
+msgstr "Napisz do nas!"
 
-#~ msgid "Feel free to contact us!"
-#~ msgstr "Napisz do nas!"
+#: cms/sites/contact.html:19
+msgid ""
+"Have a question? Post! and we will contact you by phone or at the following "
+"e-mail within 24 hours."
+msgstr ""
+"Masz pytanie? Napisz! Skontaktujemy się na podany numer telefonu lubadres e-"
+"mail w ciągu 24 godzin."
 
-#~ msgid ""
-#~ "Have a question? Post! and we will contact you by phone or at the "
-#~ "following e-mail within 24 hours."
-#~ msgstr ""
-#~ "Masz pytanie? Napisz! Skontaktujemy się na podany numer telefonu lubadres "
-#~ "e-mail w ciągu 24 godzin."
+#: cms/sites/contact.html:26
+msgid "Your Name"
+msgstr "Imie i Nazwisko"
 
-#~ msgid "Your Name"
-#~ msgstr "Imie i Nazwisko"
+#: cms/sites/contact.html:29
+msgid "E-mail address"
+msgstr "Adres e-mail"
 
-#~ msgid "E-mail address"
-#~ msgstr "Adres e-mail"
+#: cms/sites/contact.html:32
+msgid "Phone number"
+msgstr "Numer telefonu"
 
-#~ msgid "Phone number"
-#~ msgstr "Numer telefonu"
+#: cms/sites/contact.html:39
+msgid "Write a message"
+msgstr "Napisz wiadomość"
 
-#~ msgid "Write a message"
-#~ msgstr "Napisz wiadomość"
+#: cms/sites/gallery.html:13
+msgid "Our gallery"
+msgstr "Nasza Galeria"
 
-#~ msgid "Worth seeing"
-#~ msgstr "Warto zobaczyć"
+#: cms/sites/surroundings.html:14
+msgid "Surroundings"
+msgstr "Okolice"
+
+#: cms/sites/surroundings.html:21
+msgid "Worth seeing"
+msgstr "Warto zobaczyć"
+
+#: cms/sites/thanks.html:7
+msgid "Thanks for booking!"
+msgstr "Dziękujemy za rezerwację!"
+
+#: cms/sites/thanks.html:10
+msgid ""
+"We will contact you within 24h. You should recieve an e-mail with payment "
+"instructions. Payment will confirm your reservation."
+msgstr ""
+"Skontaktujemy się z Tobą w ciągu 24 godzin. Powinieneś otrzymać e-mail z instrukcją "
+"płatności. Płatność potwierdzi Twoją rezerwację."

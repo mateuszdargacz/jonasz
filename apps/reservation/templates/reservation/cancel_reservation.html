@@ -1,0 +1,5 @@
+{% if contact %}
+{{ contact.apartament }} został oznaczony jako Wolny od {{ contact.start_date }} do {{ contact.end_date }}
+{% else %}
+ Anulowanie rezerwacji nie powiodło się, sprawdź czy okres nowej rezerwacji był zarezerwowany.
+{% endif %}

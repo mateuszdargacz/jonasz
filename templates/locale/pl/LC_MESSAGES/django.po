@@ -213,10 +213,12 @@ msgstr "Warto zobaczyć"
 
 #: cms/sites/thanks.html:7
 msgid "Thanks for booking!"
-msgstr ""
+msgstr "Dziękujemy za rezerwację!"
 
 #: cms/sites/thanks.html:10
 msgid ""
 "We will contact you within 24h. You should recieve an e-mail with payment "
 "instructions. Payment will confirm your reservation."
 msgstr ""
+"Skontaktujemy się z Tobą w ciągu 24 godzin. Powinieneś otrzymać e-mail z instrukcją"
+"płatności. Płatność potwierdzi Twoją rezerwację."

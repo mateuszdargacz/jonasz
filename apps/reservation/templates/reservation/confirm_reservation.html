@@ -1,0 +1,5 @@
+{% if contact %}
+{{ contact.apartament }} został oznaczony jako zarezerwowany od {{ contact.start_date }} do {{ contact.end_date }}
+{% else %}
+ Potwierdzenie rejestracji nie powiodło się, sprawdź czy okres nowej rezerwacji nie koliduje, z istniejącymi rezerwacjami.
+{% endif %}
