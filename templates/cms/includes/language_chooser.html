@@ -4,9 +4,8 @@
     {% language language.0 %}
         <li>
         <a href="{% page_language_url language.0 %}"{% ifequal current_language language.0 %} class="current"{% endifequal %}>
-            <span class=" padding-left-25 flag-icon flag-icon-{% if language.0 != "en" %}{{ language.0 }}{% else %}gb{% endif %}" >
+            <img src="{{ STATIC_URL }}assets/images/flags/{% if language.0 != "en" %}{{ language.0 }}{% else %}us{% endif %}.png" width="16" height="11" alt="{{ language.0 }} Language" />
             {{ language.1 }}
-            </span>
         </a>
 
         </li>

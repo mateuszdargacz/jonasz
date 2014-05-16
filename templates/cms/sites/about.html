@@ -7,23 +7,3 @@
 
 {% block js %}
 {% endblock %}
-{% block reservation %}
-<div class="purchase">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <span>{% placeholder "header" %}</span>
-                <p>
-                    {% placeholder "description" %}
-                </p>
-            </div>
-            <div class="col-md-3">
-                <a href="{% url "reservation:contact-form" %}" class="btn-buy hover-effect">{% trans "Booking" %}</a>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %}
-{% block content %}
-
-{% endblock %}

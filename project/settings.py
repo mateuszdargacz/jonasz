@@ -16,7 +16,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'agro',                      # Or path to database file if using sqlite3.
+        'NAME': 'jonasz',                      # Or path to database file if using sqlite3.
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',                      # Empty for localhost through$
@@ -149,13 +149,13 @@ INSTALLED_APPS = (
     'bootstrapform',
     'modeltranslation',
     #my apps
-    'apartaments',
-    'reservation',
-    'cms_plugins.attractions',
-    'cms_plugins.slider',
-    'cms_plugins.gallery',
-    'cms_plugins.facilities',
-    'cms_plugins.contact_form',
+    'apps.apartaments',
+    'apps.reservation',
+    'apps.cms_plugins.attractions',
+    'apps.cms_plugins.slider',
+    'apps.cms_plugins.gallery',
+    'apps.cms_plugins.facilities',
+    'apps.cms_plugins.contact_form',
 
 )
 
@@ -210,7 +210,6 @@ CMS_TEMPLATES = (
 LANGUAGES = [
     ('pl', 'Polish'),
     ('en', 'English'),
-    ('de', 'German'),
 ]
 CMS_REDIRECTS=True
 CMS_SEO_FIELDS=True
