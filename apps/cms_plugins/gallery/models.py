@@ -7,9 +7,9 @@ from django.utils.translation import ugettext as _
 from cms.models import CMSPlugin
 
 CATEGORY_CHOICES = [
-    ('1', _("Apartments")),
-    ('2', _("Attractions")),
-    ('3', _("Landscape")),
+    ('1', _("Pokoje")),
+    ('2', _("Budynek")),
+    ('3', _("Okolica")),
 ]
 
 

@@ -1,23 +1,26 @@
-from .forms import SlideObjForm
 from django.contrib import admin
 
 from .models import Slide, Slider, SlideObj
-from nested_inlines.admin import NestedTabularInline, NestedStackedInline, NestedModelAdmin
 
 
-class SlideObjInline(NestedStackedInline):
+class SlideObjInline(admin.TabularInline):
     model = SlideObj
     extra = 1
-    class Media:
-        js = ("js/admin_slider.js",)
 
-class SlideInline(NestedStackedInline):
+
+class SlideInline(admin.TabularInline):
     model = Slide
     extra = 1
+
+
+class SlideAdmin(admin.ModelAdmin):
+    model = Slide
     inlines = [SlideObjInline, ]
 
 
-class SliderAdmin(NestedModelAdmin):
-    inlines = [SlideInline, ]
+class SliderAdmin(admin.ModelAdmin):
+    pass
 
+
+admin.site.register(Slide, SlideAdmin)
 admin.site.register(Slider, SliderAdmin)

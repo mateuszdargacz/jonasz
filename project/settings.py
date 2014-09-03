@@ -31,7 +31,9 @@ DATABASES = {
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.4/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
-
+SOUTH_MIGRATION_MODULES = {
+        'easy_thumbnails': 'easy_thumbnails.south_migrations',
+    }
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -62,7 +64,7 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'public', 'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -94,24 +96,24 @@ STATICFILES_FINDERS = (
 SECRET_KEY = '7ml=w+v%3_o5q-2tuu-+z3mvy*z&amp;qd8&amp;^-s1vgjt^lcmwib2$1'
 
 # List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
-)
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.doc.XViewMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
+    #    REVOLUTION^^   SLIDER MIDDLEWARE
+    'apps.cms_plugins.slider.middleware.SliderMediaMiddleware'
+
 )
 
 ROOT_URLCONF = 'project.urls'
@@ -121,7 +123,6 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, 'templates'))
 INSTALLED_APPS = (
-    'nested_inlines',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -136,14 +137,10 @@ INSTALLED_APPS = (
     'mptt',
     'sekizai',
     'cms',
-    'cms.plugins.text',
-    'cms.plugins.picture',
-    'cms.plugins.link',
-    'cms.plugins.googlemap',
-    'cms.plugins.video',
+    'djangocms_text_ckeditor',
+    'djangocms_googlemap',
     'cms.admin',
     #thidparty
-    'gmapi',
     'easy_thumbnails',
     'adminsortable',
     'bootstrapform',
@@ -215,16 +212,25 @@ CMS_REDIRECTS=True
 CMS_SEO_FIELDS=True
 
 #Emails
-CONTACT_EMAIL_TO = ['marlena.lipke@wp.pl', 'mateuszdargacz@gmail.com']
+CONTACT_EMAIL_TO = ['pensjonatjonasz@op.pl', 'mateuszdargacz@gmail.com']
 #email settings
-EMAIL_FOOTER= u"\n\nMarlena Lipke\nSkórzenno 30\n83 – 221 Osiek\ntel. 58 582 12 91\ntel. kom. 508 144 971\ne-mail: marlena.lipke@wp.pl\nNumer konta: 95 1240 1242 1111 0000 1586 2059"
-DEFAULT_FROM_EMAIL = 'Agroturystyka "U Marleny" <rezerwacja@agroturystykaumarleny.pl>'
+EMAIL_FOOTER= u"\n\nPensjonat Jonasz\nDębki\ntel. 693 519 890, 602 444 508\npensjonatjonasz@op.pl\nNumer konta:  do wypełnienia"
+DEFAULT_FROM_EMAIL = 'Pensjonat  "Jonasz" <rezerwacja@jonasz.pl>'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'rezerwacja@agroturystykaumarleny.pl'
+EMAIL_HOST_USER = 'rezerwacja@jonasz.pl'
 
-try:
-    execfile('%s/project/local_settings.py' % PROJECT_PATH)
-except IOError:
-    pass
+#TODO UNCOMMENT!!!!!!!!!!!
+# try:
+#     execfile('%s/project/local_settings.py' % PROJECT_PATH)
+# except IOError:
+#     pass
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'jonasz.db',                      # Or path to database file if using sqlite3.
+
+    }
+
+}

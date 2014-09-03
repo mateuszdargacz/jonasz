@@ -1,61 +1,45 @@
 {% load slider_tags %}
-<div class="layer_slider">
-    <div id="layerslider-container-fw">
-        <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto; ">
-            {% randomize_slides slides as slides %}
-            {% for slide in slides %}
-            <!--First Slide-->
-            <div class="ls-layer" style="slidedirection: right; transition2d: 24,25,27,28; ">
-                <img src="{{ slide.background.url }}" class="ls-bg" alt="Slide background">
-                {% for obj in slide.slideobj_set.all %}
-                    {% if obj.obj_type == "1" %}
-                    <img src="{{ STATIC_URL }}img/mockup/iphone1.png" alt="Slider Image" class="ls-s-1" style=" top:{{ obj.image_position_vertical }}px; left: {{ obj.image_position_horizontal }}px; slidedirection : left; slideoutdirection : bottom; durationin : 1500; durationout : 1500; ">
-                    {% elif obj.obj_type == "2" %}
-                        <a class="btn-u btn-u-orange ls-s1" href="{{ obj.link }}" style=" padding: 9px 20px; font-size:25px; top:{{ obj.image_position_vertical }}px; left: {{ obj.image_position_horizontal }}px; slidedirection : bottom; slideoutdirection : top; durationin : 3500; durationout : 3500; ">
-                        {{ obj.link_name }}
-                        </a>
-                    {% elif obj.obj_type == "3" %}
-                    <span class="ls-s-1" style=" text-transform: uppercase; line-height: 45px; font-size:35px; color:#fff; top:{{ obj.image_position_vertical }}px; left: {{ obj.image_position_horizontal }}px; slidedirection : top; slideoutdirection : bototm; durationin : 3500; durationout : 3500; ">
-                    {{ obj.description }}
-                    </span>
-                    {% elif obj.obj_type == "4" %}
-                        <i class="icon-chevron-sign-right ls-s-1" style=" color: #fff; font-size: 24px; top:{{ obj.image_position_vertical }}px; left: {{ obj.image_position_horizontal }}px; slidedirection : left; slideoutdirection : top; durationin : 1500; durationout : 500; "></i>
-                        <span class="ls-s-2" style=" color: #fff; font-weight: 200; font-size: 22px; top:{{ obj.image_position_vertical }}px; left: {{ obj.image_position_horizontal }}px; slidedirection : top; slideoutdirection : bottom; durationin : 1500; durationout : 500; ">
-                            {{ obj.description }}
-                        </span>
-                    {% endif %}
-                
-                {% endfor %}
-                
 
 
-            </div>
-            <!--End First Slide-->
-            {% endfor %}
+<div class="fullwidthbanner-container roundedcorners">
+<div class="fullwidthbanner">
+<ul>
+
+<!-- SLIDE  -->
+{% for slide in slides %}
+
+<li data-transition="{{ slide.slide_in }}" data-slotamount="7" data-masterspeed="1500">
+
+    <!-- COVER IMAGE -->
+    <img src="{{ slide.background.url }}" alt="" data-bgfit="cover" data-bgposition="left top"
+         data-bgrepeat="no-repeat">
+
+    <!-- LAYER NR. 1 -->
+    {% for obj in slide.slideobj_set.all %}
+        <div class="tp-caption lightgrey_divider skewfromrightshort customout"
+             data-x="{{ obj.image_position_vertical }}"
+             data-y="{{ obj.image_position_horizontal }}"
+             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+             data-speed="{{ obj.speed }}"
+             data-start="{{ obj.start_time }}"
+             data-easing="{{ obj.data_easying }}"
+             data-captionhidden="off"
+             style="z-index: {{ forloop.counter }}">
+            {% if obj.link %}
+                <a class="btn btn-primary btn-lg" target="_blank"
+                href="{{ obj.link }}">{{ obj.link_name }}</a>
+            {% endif %}
+            {% if obj.image %}
+            <img class="img-responsive" src="{{ obj.image }}" alt="">
+            {% endif %}
         </div>
-    </div>
+    {% endfor %}
+</li>
+{% endfor %}
+</ul>
+<div class="tp-bannertimer"></div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 

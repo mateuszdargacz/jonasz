@@ -15,7 +15,25 @@
 
     <!-- WEB FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        @font-face {
+            font-family: "Urban";
+            src: url('{{ STATIC_URL }}assets/fonts/Urban.ttf') format("truetype");
+        }
+        @font-face {
+            font-family: "Caitlin";
+            src: url('{{ STATIC_URL }}assets/fonts/Caitlin.ttf') format("truetype");
+        }
+        @font-face {
+            font-family: "FFF Tusj";
+            src: url('{{ STATIC_URL }}assets/fonts/FFF_Tusj.ttf') format("truetype");
+        }
+        @font-face {
+            font-family: "Prism";
+            src: url('{{ STATIC_URL }}assets/fonts/Prism-Regular.otf') format("truetype");
+        }
 
+    </style>
     <!-- CORE CSS -->
     <link href="{{ STATIC_URL }}assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="{{ STATIC_URL }}assets/css/font-awesome.css" rel="stylesheet" type="text/css"/>
@@ -64,14 +82,11 @@
 
     <!-- STYLESWITCHER - REMOVE ON PRODUCTION/DEVELOPMENT -->
     <link href="{{ STATIC_URL }}assets/plugins/styleswitcher/styleswitcher.css" rel="stylesheet" type="text/css"/>
-
+    <link href="{{ STATIC_URL }}cms/css/cms.base.css" rel="stylesheet" type="text/css"/>
     <!-- Morenizr -->
     <script type="text/javascript" src="{{ STATIC_URL }}assets/plugins/modernizr.min.js"></script>
     {% block extra-css %}{% endblock %}
 
-    {% block css %}
-
-    {% endblock %}
 
 </head>
 <body>
@@ -85,7 +100,6 @@
     </div>
   <![endif]-->
 {% cms_toolbar %}
-
 {% block header %}
  <header id="topHead">
 			<div class="container">
@@ -93,14 +107,16 @@
 				<!-- PHONE/EMAIL -->
 				<span class="quick-contact pull-left">
 					<i class="fa fa-phone"></i> 693 519 890 &bull;
-					<a class="hidden-xs" href="mailto:mail@yourdomain.com">mt.quercus@op.pl</a>
+					<a class="hidden-xs" href="mailto:pensjonatjonasz@op.pl">
+                    pensjonatjonasz@op.pl
+                    </a>
 				</span>
 				<!-- /PHONE/EMAIL -->
 
 				<!-- LANGUAGE -->
 				<div class="btn-group pull-right hidden-xs">
 					<button class="dropdown-toggle language" type="button" data-toggle="dropdown">
-						<i class="fa fa-globe"></i> {% trans "languages" %}
+						<i class="fa fa-globe"></i> {% trans "Languages" %}
 					</button>
 
 					<ul class="dropdown-menu">
@@ -108,14 +124,6 @@
 					</ul>
 				</div>
 				<!-- /LANGUAGE -->
-
-				<!-- LINKS -->
-				<div class="pull-right nav hidden-xs">
-					<a href="page-about-us.html"><i class="fa fa-angle-right"></i> About</a>
-					<a href="contact-us.html"><i class="fa fa-angle-right"></i> Contact</a>
-				</div>
-				<!-- /LINKS -->
-
 			</div>
 		</header>
 		<!-- /Top Bar -->
@@ -130,8 +138,8 @@
 				</button>
 
 				<!-- Logo text or image -->
-				<a class="logo" href="index.html">
-					<img src="{{ STATIC_URL }}assets/images/logo.png" alt="Atropos" />
+				<a class="logo" href="/">
+                    <h1 class="logo-text">Jonasz</h1>
 				</a>
 
 				<div class="navbar-collapse nav-main-collapse collapse pull-right">
@@ -160,557 +168,93 @@
 <div id="wrapper">
 
 <!-- REVOLUTION SLIDER -->
-<div class="fullwidthbanner-container roundedcorners">
-<div class="fullwidthbanner">
-<ul>
-
-<!-- SLIDE  -->
-<li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
-
-    <!-- COVER IMAGE -->
-    <img src="{{ STATIC_URL }}assets/images/demo/parallax_bg.jpg" alt="" data-bgfit="cover" data-bgposition="left top"
-         data-bgrepeat="no-repeat">
-
-    <!-- LAYER NR. 1 -->
-    <div class="tp-caption lightgrey_divider skewfromrightshort customout"
-         data-x="85"
-         data-y="224"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="500"
-         data-start="1200"
-         data-easing="Power4.easeOut"
-         data-endspeed="500"
-         data-endeasing="Power4.easeIn"
-         data-captionhidden="off"
-         style="z-index: 2">
-    </div>
-
-    <!-- LAYER NR. 2 -->
-    <div class="tp-caption customin customout"
-         data-x="right" data-hoffset="-220"
-         data-y="bottom" data-voffset="0"
-         data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="800"
-         data-start="700"
-         data-easing="Power4.easeOut"
-         data-endspeed="500"
-         data-endeasing="Power4.easeIn"
-         style="z-index: 3"><img src="{{ STATIC_URL }}assets/images/demo/revolution_slider/desktop_slider_2.png" alt="">
-    </div>
-
-    <!-- LAYER NR. 2 -->
-    <div class="tp-caption customin customout"
-         data-x="right" data-hoffset="-100"
-         data-y="bottom" data-voffset="0"
-         data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="1500"
-         data-start="700"
-         data-easing="Elastic.easeInOut"
-         data-endspeed="500"
-         data-endeasing="Power1.easeIn"
-         style="z-index: 3"><img src="{{ STATIC_URL }}assets/images/demo/revolution_slider/slider_run.png" alt="">
-    </div>
-
-    <!-- LAYER NR. 3 -->
-    <div class="tp-caption large_bold_grey skewfromrightshort customout"
-         data-x="80"
-         data-y="66"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="500"
-         data-start="800"
-         data-easing="Back.easeOut"
-         data-endspeed="500"
-         data-endeasing="Power4.easeIn"
-         data-captionhidden="off"
-         style="z-index: 4">Powerful
-    </div>
-
-    <!-- LAYER NR. 4 -->
-    <div class="tp-caption large_bold_grey skewfromleftshort customout"
-         data-x="80"
-         data-y="122"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="300"
-         data-start="1100"
-         data-easing="Back.easeOut"
-         data-endspeed="500"
-         data-endeasing="Power4.easeIn"
-         data-captionhidden="off"
-         style="z-index: 7">Multipurpose
-    </div>
-
-    <!-- LAYER NR. 5 -->
-    <div class="tp-caption small_thin_grey customin customout"
-         data-x="80"
-         data-y="230"
-         data-customin="x:0;y:100;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:3;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:0% 0%;"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="500"
-         data-start="1300"
-         data-easing="Power4.easeOut"
-         data-endspeed="500"
-         data-endeasing="Power4.easeIn"
-         data-captionhidden="off"
-         style="z-index: 8">
-        Atropos Multipurpose Template, now offering you<br/>
-        over 110 html pages fully customizable and very<br/>
-        easy to use! <strong>Lifetime free update!</strong><br/>
-        <a href="index-more.html">Read more...</a>
-    </div>
-
-    <!-- LAYER NR. 6 -->
-    <div class="tp-caption large_bold_darkblue skewfromleftshort customout"
-         data-x="80" data-hoffset="-90"
-         data-y="350"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="500"
-         data-start="1600"
-         data-easing="Back.easeOut"
-         data-endspeed="500"
-         data-endeasing="Power4.easeIn"
-         data-captionhidden="off"
-         style="z-index: 10">110+
-    </div>
-
-    <!-- LAYER NR. 7 -->
-    <div class="tp-caption medium_bg_darkblue skewfromleftshort customout"
-         data-x="80" data-hoffset="-90"
-         data-y="410"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="500"
-         data-start="1650"
-         data-easing="Back.easeOut"
-         data-endspeed="500"
-         data-endeasing="Power4.easeIn"
-         data-captionhidden="off"
-         style="z-index: 11">Html Pages
-    </div>
-
-    <div class="tp-caption medium_bold_orange skewfromleftshort customout start font300"
-         data-x="230" data-hoffset="-90"
-         data-y="370"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="500"
-         data-start="1850"
-         data-easing="Back.easeOut"
-         data-endspeed="500"
-         data-endeasing="Power4.easeIn"
-         data-captionhidden="off"
-         style="z-index: 13;">Fully <strong>Responsive</strong>
-    </div>
-
-    <!-- LAYER NR. 8 -->
-    <div class="tp-caption medium_bg_orange skewfromleftshort customout"
-         data-x="230" data-hoffset="-90"
-         data-y="410"
-         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-         data-speed="500"
-         data-start="2300"
-         data-easing="Back.easeOut"
-         data-endspeed="500"
-         data-endeasing="Power4.easeIn"
-         data-captionhidden="off"
-         style="z-index: 21">Customizable Pages
-    </div>
-
-</li>
-
-<!-- SLIDE  -->
-<li data-transition="3dcurtain-vertical" data-slotamount="14" data-masterspeed="300" data-delay="10000">
-
-    <!-- COVER IMAGE -->
-    <img src="{{ STATIC_URL }}assets/images/demo/revolution_slider/slider7.jpg" alt="" data-bgfit="cover" data-bgposition="left top"
-         data-bgrepeat="no-repeat"/>
-
-    <div class="tp-caption lft boxshadow"
-         data-x="70"
-         data-y="70"
-         data-speed="900"
-         data-start="500"
-         data-easing="easeOutBack">
-        <iframe src='http://player.vimeo.com/video/8408210?title=0&amp;byline=0&amp;portrait=0;api=1' width='640'
-                height='360' style='width:640px; height:360px;'></iframe>
-    </div>
-
-    <div class="tp-caption sft large_bold_grey"
-         data-x="750"
-         data-y="70"
-         data-speed="300"
-         data-start="1200"
-         data-easing="easeOutExpo">FEATURED
-    </div>
-
-    <div class="tp-caption sft modern_big_redbg"
-         data-x="750"
-         data-y="164"
-         data-speed="300"
-         data-start="1300"
-         data-easing="easeOutExpo">Best With Atropos
-    </div>
-
-    <div class="tp-caption lfb thinheadline_dark"
-         data-x="750"
-         data-y="210"
-         data-speed="300"
-         data-start="1400"
-         data-easing="easeOutExpo">You can easily add
-    </div>
-
-    <div class="tp-caption lfb thinheadline_dark"
-         data-x="750"
-         data-y="244"
-         data-speed="300"
-         data-start="1500"
-         data-easing="easeOutExpo">Vimeo &amp; Youtube Videos
-    </div>
-
-    <div class="tp-caption lfb thinheadline_dark"
-         data-x="750"
-         data-y="278"
-         data-speed="300"
-         data-start="1600"
-         data-easing="easeOutExpo">to your Slides
-    </div>
-
-    <div class="tp-caption lfb medium_bg_darkblue"
-         data-x="750"
-         data-y="390"
-         data-speed="300"
-         data-start="1600"
-         data-easing="easeOutExpo"><i class="fa fa-html5"></i> HTML5
-    </div>
-
-    <div class="tp-caption lfb medium_bg_orange"
-         data-x="860"
-         data-y="390"
-         data-speed="300"
-         data-start="1600"
-         data-easing="easeOutExpo"><i class="fa fa-css3"></i> CSS3
-    </div>
-
-</li>
-
-<!-- SLIDE -->
-<li data-transition="incube-horizontal" data-slotamount="5" data-masterspeed="700">
-
-    <!-- COVER IMAGE -->
-    <img src="{{ STATIC_URL }}assets/images/demo/revolution_slider/church_parallax.jpg" alt="" data-bgfit="cover"
-         data-bgposition="left top" data-bgrepeat="no-repeat">
-
-    <div class="tp-caption large_text sft"
-         data-x="center"
-         data-y="130"
-         data-speed="300"
-         data-start="1000"
-         data-endspeed="500"
-         data-easing="easeOutBack"><h1>ATROPOS</h1>
-    </div>
-
-    <div class="tp-caption large_text sft"
-         data-x="center"
-         data-y="260"
-         data-speed="300"
-         data-start="1700"
-         data-endspeed="500"
-         data-easing="easeOutBack"><h2>MULTIPURPOSE TEMPLATE</h2>
-    </div>
-
-    <div class="tp-caption large_text sft"
-         data-x="center"
-         data-y="360"
-         data-customin="x:-150;y:-280;z:0;rotationX:-140;rotationY:-280;rotationZ:-220;scaleX:1.5;scaleY:0;skewX:57;skewY:60;opacity:0;transformPerspective:600;transformOrigin:120% 190%;"
-         data-customout="x:-450;y:-430;z:-30;rotationX:90;rotationY:-290;rotationZ:-20;scaleX:1;scaleY:2.8;skewX:59;skewY:4;opacity:0;transformPerspective:600;transformOrigin:70% 0%;"
-         data-speed="1500"
-         data-endspeed="500"
-         data-start="2700"
-         data-endeasing="Bounce.easeOut"
-         data-easing="Back.easeInOut">
-        <a class="btn btn-primary btn-lg" target="_blank"
-           href="https://wrapbootstrap.com/theme/atropos-responsive-website-template-WB05SR527">BUY ATROPOS</a>
-    </div>
-
-</li>
-
-</ul>
-<div class="tp-bannertimer"></div>
-</div>
-</div>
+{% placeholder "slider" or %}
+   {% show_placeholder "slider" "home" %}
+   {% endplaceholder %}
 <!-- /REVOLUTION SLIDER -->
 
 
-<section class="container text-center">
-    <h1 class="text-center">
-        <strong>Welcome</strong> to Atropos
-        <span class="subtitle">COME ON, DON'T BE SHY! TODAY WE DON'T BITE!</span>
-    </h1>
+{% block content %}
 
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales
-        sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac
-        massa.</p>
-</section>
+{% endblock %}
 
 
-<div class="container">
-    <hr class="half-margins"/>
-    <!-- hr line -->
-</div>
 
-
-<!-- FEATURED BOXES 3 -->
-<section class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="featured-box nobg border-only">
-                <div class="box-content">
-                    <i class="fa fa-users"></i>
-                    <h4>For Everyone</h4>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="featured-box nobg border-only left-separator">
-                <i class="fa fa-book"></i>
-                <h4>Well Documented</h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="featured-box nobg border-only left-separator">
-                <i class="fa fa-trophy"></i>
-                <h4>For Your Business</h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="featured-box nobg border-only left-separator">
-                <i class="fa fa-cogs"></i>
-                <h4>Highly Customizable</h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- /FEATURED BOXES 3 -->
-
-
-<div class="container">
-    <hr class="no-lines"/>
-    <!-- hr line -->
-</div>
-
-
-<!-- CAROUSEL -->
-<section class="container">
-    <div class="row">
-
-        <div class="col-md-6">
-            <h2>Passion, precision and simplicity</h2>
-
-            <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit. Maecenas metus nulla, commodo a
-                sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et,
-                iaculis ac massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo
-                a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et,
-                iaculis ac massa.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, <strong>commodo a sodales
-                sed</strong>, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et,
-                <strong>iaculis ac massa</strong>.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed,
-                dignissim pretium nunc. Nam et <a href="#">lacus neque</a>. Ut enim massa, sodales tempor convallis et,
-                iaculis ac massa.</p>
-
-            <!-- divider -->
-            <div class="divider styleColor">
-                <i class="fa fa-leaf"></i>
-            </div>
-
-            <!-- carousel -->
-            <div class="owl-carousel"
-                 data-plugin-options='{"items": 3, "singleItem": false, "pagination": false, "autoPlay": true}'>
-                <div>
-                    <img class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/brands/1.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/brands/2.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/brands/3.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/brands/4.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/brands/5.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/brands/6.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/brands/7.jpg" alt="">
-                </div>
-                <div>
-                    <img class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/brands/8.jpg" alt="">
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-md-6">
-            <div class="owl-carousel controlls-over"
-                 data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": true, "transitionStyle":"fadeUp"}'>
-                <div>
-                    <img alt="" class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/test_2.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-responsive" src="{{ STATIC_URL }}assets/images/demo/test_1.jpg">
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- /CAROUSEL -->
-
-
-<!-- CALLOUT -->
-<div class="bs-callout margin-top text-center styleBackground noradius">
-    <h3>Welcome to <strong>Atropos</strong> Multipurpose <strong>template</strong>.
-        <a href="https://wrapbootstrap.com/theme/atropos-responsive-website-template-WB05SR527" target="_blank"
-           class="btn btn-primary btn-lg">Buy Now!</a></h3>
-</div>
-<!-- /CALLOUT -->
-
-
+{% block paralax %}
 <!-- PARALLAX -->
 <section class="parallax delayed margin-footer" data-stellar-background-ratio="0.7"
-         style="background-image: url('{{ STATIC_URL }}assets/images/demo/parallax.jpg');">
+         style="background-image: url('{{ STATIC_URL }}assets/images/pensjonat_jonasz_1.jpg');">
     <span class="overlay"></span>
 
     <div class="container">
 
         <div class="row">
             <!-- left content -->
-            <div class="col-md-7 animation_fade_in">
-                <h2>Atropos <strong>Multipurpose</strong></h2>
+            <div class="col-md-7 animation_fade_in" >
+                <h2> <strong>{% trans "Zarezerwuj" %}</strong> {% trans "miejsce teraz!" %}</h2>
 
                 <p class="lead">
-                    Atropos is a multipurpose template for business or portfolio website. It is fully responsive design
-                    ready for PC, Tablet and Mobile.
+                    {% trans "Wypełnij Formularz kontaktowy, a przedstawimy Ci pełną ofertę, oraz aktualne promocje!" %}
                 </p>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales
-                    sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis
-                    ac massa.
-                </p>
-
-                <p>
-                    <small><em> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a
-                        sodales sed, dignissim pretium nunc.</em></small>
-                </p>
-
-                <a class="btn btn-primary btn-lg" href="index-more.html">Tell Me More</a>
+                <a class="btn btn-primary btn-lg" href="index-more.html">{% trans "Napisz do nas." %}</a>
             </div>
 
             <!-- right image -->
-            <div class="col-md-5 animation_fade_in">
-                <img class="visible-md visible-lg img-responsive pull-right" src="{{ STATIC_URL }}assets/images/demo/desktop2.png"
-                     alt=""/>
-            </div>
+
         </div>
     </div>
 </section>
 <!-- PARALLAX -->
+{% endblock %}
 
 </div>
 <!-- /WRAPPER -->
 <!-- FOOTER -->
-<footer>
+<footer style="max-height: 350px;">
 
     <!-- copyright , scrollTo Top -->
     <div class="footer-bar">
         <div class="container">
-            <span class="copyright">Copyright &copy; Your Company, LLC . All Rights Reserved.</span>
-            <a class="toTop" href="#topNav">BACK TO TOP <i class="fa fa-arrow-circle-up"></i></a>
+            <span class="copyright">Copyright &copy; Mateusz Dargacz, All Rights Reserved.</span>
+            <a class="toTop" href="#topNav">{% trans "Przewiń do góry" %} <i class="fa fa-arrow-circle-up"></i></a>
         </div>
     </div>
     <!-- copyright , scrollTo Top -->
     <!-- footer content -->
     <div class="footer-content">
         <div class="container">
-
             <div class="row">
-
-
                 <!-- FOOTER CONTACT INFO -->
-                <div class="column col-md-4">
-                    <h3>CONTACT</h3>
+                <div class="column col-md-6">
+                    <h3>{% trans "Kontakt" %}</h3>
 
-                    <p class="contact-desc">
-                        Atropos is a very powerful HTML5 template, you will be able to create an awesome website in a
-                        very simple way.
-                    </p>
                     <address class="font-opensans">
                         <ul>
                             <li class="footer-sprite address">
-                                PO Box 21132<br/>
-                                Here Weare St, Melbourne<br/>
-                                Vivas 2355 Australia<br/>
+                                Dębki <br/>
+                                {% trans "Ul. Liliowa" %}<br/>
+                                {% trans "Pomorze, Polska" %}<br/>
                             </li>
                             <li class="footer-sprite phone">
-                                Phone: 1-800-565-2390
+                                693 519 890,  602 444 508
                             </li>
                             <li class="footer-sprite email">
-                                <a href="mailto:support@yourname.com">support@yourname.com</a>
+                                <a href="mailto:pensjonatjonasz@op.pl">pensjonatjonasz@op.pl</a>
                             </li>
                         </ul>
                     </address>
 
                 </div>
                 <!-- /FOOTER CONTACT INFO -->
-
-
                 <!-- FOOTER LOGO -->
-                <div class="column logo col-md-4 text-center">
-                    <div class="logo-content">
-                        <img class="animate_fade_in" src="{{ STATIC_URL }}assets/images/logo_footer.png" width="200" alt=""/>
-                        <h4>ATROPOS TEMPLATE</h4>
+                <div class="column logo col-md-6 text-center" style="max-height: 250px;">
+                    <div class="logo-content footer-logo">
+                        <h4>Pensjonat</h4> <br/>
+                        <h1 class="logo-text" >Jonasz</h1>
                     </div>
                 </div>
                 <!-- /FOOTER LOGO -->
-
-
-                <!-- FOOTER LATEST POSTS -->
-                <div class="column col-md-4 text-right">
-                    <h3>RECENT POSTS</h3>
-
-                    <div class="post-item">
-                        <small>JANUARY 2, 2014 BY ADMIN</small>
-                        <h3><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
-                    </div>
-                    <div class="post-item">
-                        <small>JANUARY 2, 2014 BY ADMIN</small>
-                        <h3><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
-                    </div>
-                    <div class="post-item">
-                        <small>JANUARY 2, 2014 BY ADMIN</small>
-                        <h3><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
-                    </div>
-
-                    <a href="blog-masonry-sidebar.html" class="view-more pull-right">View Blog <i
-                            class="fa fa-arrow-right"></i></a>
-
-                </div>
-                <!-- /FOOTER LATEST POSTS -->
-
             </div>
 
         </div>
@@ -751,7 +295,6 @@
 
 
 <script type="text/javascript" src="{{ STATIC_URL }}assets/js/scripts.js"></script>
-
 {% render_block "js" %}
 {% block extra-js %}{% endblock %}
 

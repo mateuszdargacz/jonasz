@@ -5,52 +5,129 @@
 
 {% endblock %}
 
+
 {% block js %}
-    <script type="text/javascript" src="{{ STATIC_URL }}js/contact_form.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}assets/js/contact_form.js"></script>
 
 {% endblock %}
-
 {% block content %}
-            <div class="headline">
-                <h3>{% trans "Feel free to contact us!" %} </h3>
-            </div>
-            <div class="contact">
-                <p>
-                    {% trans "Have a question? Post! and we will contact you by phone or at the following e-mail within 24 hours." %}
-                </p>
-                <form id="contact-form" action="#">
-                    <div class="row form">
-                        <div class="col-sm-6 row-col">
-                            <div class="box">
-                                <div id="name-group" class="form-group">
-                                <input class="name form-control" type="text" name="name" placeholder="{% trans "Your Name" %}">
-                                </div>
-                                <div id="email-group" class="form-group">
-                                <input class="mail form-control" type="text" name="email" placeholder="{% trans "E-mail address" %}l">
-                                </div>
-                                <div id="phone-group" class="form-group ">
-                                <input class="phone form-control" type="text" name="phone" placeholder="{% trans "Phone number" %}">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="box">
-                                <div id="message-group" class="form-group">
-                                <textarea name="message"  rows="6" placeholder="{% trans "Write a message" %}" class="form-control"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row submit">
-                        <div id="submit-contact" class="col-md-2 pull-right">
-                            <br/>
-                            <input  class="btn-u btn-u-green"type="submit" value="{% trans "Send" %}">
+    <section id="contact" class="container">
+        <div class="row">
+            <!-- FORM -->
+            <div class="col-md-8">
+                <h2>{% trans "Napisz <strong><em>do nas!</em></strong>" %} </h2>
+                <form class="white-row" id="contact-form" action="#" method="post">
+                    <div class="row">
+                        <div  class="form-group">
+                            <div id="name-group" class="col-md-6">
+                                <label>Full Name *</label>
+                                <input type="text" value="" data-msg-required="Please enter your name." maxlength="100"
+                                       class="form-control" name="name" id="name">
+                            </div>
+
+                            <div id="email-group" class="col-md-6">
+                                <label>E-mail Address *</label>
+                                <input type="email" value="" data-msg-required="Please enter your email address."
+                                       data-msg-email="Please enter a valid email address." maxlength="100"
+                                       class="form-control" name="email" id="email">
+                            </div>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div class="row">
+                        <div  class="form-group">
+                            <div id="phone-group" class="col-md-12">
+                                <label>Subject *</label>
+                                <input type="text" value="" data-msg-required="Please enter the subject."
+                                       maxlength="100" class="form-control" name="phone" id="subject">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div id="message-group" class="col-md-12">
+                                <label>Message *</label>
+                                <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10"
+                                          class="form-control" name="message" id="message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-12" id="submit-contact">
+                            <input type="submit"  value="{% trans "Wyślij" %}" class="btn btn-primary btn-lg"
+                                   data-loading-text="{% trans "Ładowanie" %}">
+                        </div>
+                    </div>
                 </form>
             </div>
-                     {% placeholder "Mapa" %}
+            <!-- /FORM -->
+            <!-- INFO -->
+            <div class="col-md-4">
+
+                <h2>{% trans "Lokalizacja" %}</h2>
+
+                <div class="white-row">
+                    <div id="gmap"><!-- google map --></div>
+                    <script type="text/javascript">
+                        var $googlemap_latitude = 54.826865,
+                                $googlemap_longitude = 18.0820632,
+                                $googlemap_zoom = 11;
+                    </script>
+
+                    <div class="divider white half-margins"><!-- divider -->
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <p class="nomargin-bottom">
+                        <span class="block"><strong><i class="fa fa-map-marker"></i> {% trans "Adres:" %}</strong> Dębki</span>
+                        <span class="block"><strong><i class="fa fa-phone"></i> {% trans "Telefon:" %}</strong> 693 519 890, 602 444 508</span>
+                        <span class="block"><strong><i class="fa fa-envelope"></i> {% trans "Email:" %}</strong> <a
+                                href="mailto:pensjonatjonasz@op.pl">pensjonatjonasz@op.pl</a></span>
+                    </p>
+
+                </div>
+            </div>
+            <!-- /INFO -->
+
+        </div>
+
+    </section>
+
+
+
+    {#                    <div class="row form">#}
+    {#                        <div class="col-sm-6 row-col">#}
+    {#                            <div class="box">#}
+    {#                                <div id="name-group" class="form-group">#}
+    {#                                <input class="name form-control" type="text" name="name" placeholder="{% trans "Your Name" %}">#}
+    {#                                </div>#}
+    {#                                <div id="email-group" class="form-group">#}
+    {#                                <input class="mail form-control" type="text" name="email" placeholder="{% trans "E-mail address" %}l">#}
+    {#                                </div>#}
+    {#                                <div id="phone-group" class="form-group ">#}
+    {#                                <input class="phone form-control" type="text" name="phone" placeholder="{% trans "Phone number" %}">#}
+    {#                                </div>#}
+    {#                            </div>#}
+    {#                        </div>#}
+    {#                        <div class="col-sm-6">#}
+    {#                            <div class="box">#}
+    {#                                <div id="message-group" class="form-group">#}
+    {#                                <textarea name="message"  rows="6" placeholder="{% trans "Write a message" %}" class="form-control"></textarea>#}
+    {#                                </div>#}
+    {#                            </div>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {##}
+    {#                    <div class="row submit">#}
+    {#                        <div id="submit-contact" class="col-md-2 pull-right">#}
+    {#                            <br/>#}
+    {#                            <input  class="btn-u btn-u-green"type="submit" value="{% trans "Send" %}">#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                    <div class="clearfix"></div>#}
+    {#                </form>#}
+    {#            </div>#}
+    {% placeholder "Mapa" %}
 
 {% endblock %}

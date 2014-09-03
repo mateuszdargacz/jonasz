@@ -3,8 +3,9 @@
 */
 header#topNav nav ul.nav-main > li:hover > a,
 header#topNav nav ul.nav-main > li.active > a,
+header#topNav nav ul.nav-main > li.selected > a,
 header#topNav nav ul.nav-main li a:hover {
-	color:#333;
+	color:#333!important;
 }
 header#topNav nav ul.nav-main ul a,
 header#topNav nav ul.nav-main ul a.active,

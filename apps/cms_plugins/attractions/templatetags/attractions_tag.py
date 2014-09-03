@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from cms_plugins.attractions.forms import MapForm
-from cms_plugins.attractions.models import TO_MAPS_OBJ
+from apps.cms_plugins.attractions.forms import MapForm
+from apps.cms_plugins.attractions.models import TO_MAPS_OBJ
 from django import template
 
 from gmapi import maps
@@ -8,21 +8,23 @@ from gmapi.forms.widgets import GoogleMap
 
 register = template.Library()
 
+
 @register.assignment_tag
 def render_map(Gmap, markers=None):
     if Gmap and markers:
-        gmap = maps.Map(opts = {
-        'center': maps.LatLng(Gmap.center_lat, Gmap.center_long),
-        'mapTypeId': TO_MAPS_OBJ[Gmap.map_type],
-        'zoom': Gmap.zoom,
-        'mapTypeControlOptions': {
-             'style': maps.MapTypeControlStyle.DROPDOWN_MENU
-        },
+        gmap = maps.Map(opts={
+            'center': maps.LatLng(Gmap.center_lat, Gmap.center_long),
+            'mapTypeId': TO_MAPS_OBJ[Gmap.map_type],
+            'zoom': Gmap.zoom,
+            'scrollwheel': False,
+            'mapTypeControlOptions': {
+                'style': maps.MapTypeControlStyle.DROPDOWN_MENU
+            },
         })
         for marker in markers:
-            _marker = maps.Marker(opts = {
-            'map': gmap,
-            'position': maps.LatLng(marker.lat, marker.long),
+            _marker = maps.Marker(opts={
+                'map': gmap,
+                'position': maps.LatLng(marker.lat, marker.long),
             })
             maps.event.addListener(_marker, 'mouseover', 'myobj.markerOver')
             maps.event.addListener(_marker, 'mouseout', 'myobj.markerOut')

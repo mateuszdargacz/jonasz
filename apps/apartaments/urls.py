@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import *
 
 urlpatterns = patterns('apartaments.views',
     url(r'^$', 'apartaments_list', name='apartaments_list'),

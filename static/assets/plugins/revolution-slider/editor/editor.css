@@ -212,7 +212,7 @@ menu						{	border-top:2px solid #eee;border-bottom:2px solid #eee; padding:0px 
 ********************************/
 .spectaculus				{	max-width:1230px; padding:0px 30px; margin:auto; position: relative;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
 .spectaculus2				{	width:100%;padding:0; margin:auto; position: relative;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
-.bannercontainer			{	position:relative;max-height:500px;}
+.bannercontainer			{	position:relative;max-height:300px;}
 
 
 /***************************************
