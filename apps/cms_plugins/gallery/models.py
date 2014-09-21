@@ -30,7 +30,7 @@ class Gallery(Sortable):
 class Image(Sortable):
     gallery = models.ForeignKey(Gallery, verbose_name=_("Gallery"))
     title = models.CharField(_("Title"), max_length=35)
-    image = models.ImageField(_(u"Image"), upload_to="media/gallery/images/")
+    image = models.ImageField(_(u"Image"), upload_to="gallery/images/")
     size = models.CharField(_("Category"), max_length=1, choices=CATEGORY_CHOICES)
 
     class Meta(Sortable.Meta):

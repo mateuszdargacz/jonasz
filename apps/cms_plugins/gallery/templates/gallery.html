@@ -1,23 +1,5 @@
 {% load thumbnail sekizai_tags gallery_tags i18n %}
 
-<div class="container">
-    <div class="gallery-page">
-        <div class="row">
-
-            </ul>
-
-        </div>
-        <br/>
-
-        <div class="row margin-bottom-20">
-            <ul id="Grid">
-
-
-            </ul>
-        </div>
-    </div>
-    <!--/gallery-page-->
-</div><!--/container-->
 
 
 <section id="portfolio" class="container">
@@ -30,13 +12,13 @@
         <li data-option-value="*" class="filter active"><a href="javascript:void(0)">{% trans "Wszystkie" %}</a></li>
         {% for category in categories %}
             <li class="filter" data-option-value=".{{ category.0 }}"><a
-                    href="javascript:void(0)">{{ category.1 }}</a></li>
+                    href="javascript:void(0)">{% trans category.1 %} </a></li>
         {% endfor %}
     </ul>
     <div class="row">
-        <ul class="sort-destination isotope fullcenter fadeIn" data-sort-id="isotope-list"
-            data-plugin-options="{&quot;delegate&quot;: &quot;a&quot;, &quot;gallery&quot;: {&quot;enabled&quot;: true}}"
-            style="position: relative; overflow: hidden; height: 623px;">
+            <ul class="sort-destination isotope lightbox" data-sort-id="isotope-list" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
+
+{#            style="position: relative; overflow: hidden; height: 623px;">#}
             {% for image in images %}
                 <li class="isotope-item col-sm-6 col-md-3 {{ image.size }}" title="{{ image.title }}"
                     style="position: absolute; left: 0px; top: 0px; transform: translate3d(879px, 416px, 0px) scale3d(1, 1, 1); opacity: 1;">

@@ -38,7 +38,7 @@ class GMap(models.Model):
 class PointMarker(models.Model):
     GMap = models.ForeignKey(GMap)
     title = models.CharField(_(u"Title"), max_length=60)
-    image = models.ImageField(_(u"Image"),upload_to="media/slider/images/backgrounds/",null=True,blank=True)
+    image = models.ImageField(_(u"Image"),upload_to="slider/images/backgrounds/",null=True,blank=True)
     lat = models.DecimalField(_(u"Latitude"), decimal_places=6, max_digits=9)
     long = models.DecimalField(_(u"Longitude"),decimal_places=6, max_digits=9)
     description = models.TextField(_(u"Description"), max_length=60)

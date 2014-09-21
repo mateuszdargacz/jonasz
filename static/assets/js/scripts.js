@@ -31,7 +31,6 @@
 	FITVIDS
 	WAIT FOR IMAGES [used by masonry]
 *************************************************** **/
-
 	/* Init */
 	jQuery(window).ready(function () {
 		Atropos();
@@ -56,16 +55,16 @@
 		_quickCart();
 		_placeholder();
 
-		/** Bootstrap Tooltip **/ 
+		/** Bootstrap Tooltip **/
 		jQuery("a[data-toggle=tooltip]").tooltip();
-		
+
 		/** Fitvids [Youtube|Vimeo] **/
 		if(jQuery(".fullwidthbanner iframe").length < 1 && jQuery(".fullscreenbanner iframe").length < 1 && jQuery(".fullscreenvideo").length < 1) { // disable fitvids if revolution slider video is present!
-			jQuery("body").fitVids(); 
+			jQuery("body").fitVids();
 		}
 
-		/** 
-			price slider 
+		/**
+			price slider
 
 			<script type="text/javascript" charset="utf-8">
 				var slider_config = { from: 10, to: 500, heterogeneity: ['50/100', '75/250'], step: 10, dimension: '&nbsp;$', skin: 'round_plastic' };
@@ -112,8 +111,8 @@ function _topNav() {
 			topMain(); // on scroll
 		}
 
-	});	
-	
+	});
+
 	if(jQuery(window).width() > 1006) {
 		topMain(); // on load
 	}
@@ -144,7 +143,7 @@ function _topNav() {
 					jQuery('#header_shadow').css({"top":"40px"});
 				} else {
 					jQuery('#wrapper').css({"margin-top":"0px"});
-					jQuery('#header_shadow').css({"top":"80px"});				
+					jQuery('#header_shadow').css({"top":"80px"});
 				}
 
 			}
@@ -165,7 +164,7 @@ function _topNav() {
 		var _scrollTop 		= jQuery(document).scrollTop();
 
 		if(window.topNavSmall === false && _scrollTop > 0) {
-		
+
 			jQuery('header#topNav div.nav-main-collapse').addClass('topFix');
 			jQuery('#topNav').stop().animate({ 'height':'60px'},400);
 			jQuery('header#topNav div.nav-main-collapse').stop().animate({ 'margin-top':'6px'},400);
@@ -177,7 +176,7 @@ function _topNav() {
 			}
 
 			window.topNavSmall = true;
-		} 
+		}
 
 		if(window.topNavSmall === true && _scrollTop < 3) {
 			jQuery('header#topNav div.nav-main-collapse').removeClass('topFix');
@@ -314,33 +313,33 @@ function _animate() {
 	jQuery('.animate_from_top').each(function () {
 		jQuery(this).appear(function() {
 			jQuery(this).delay(150).animate({opacity:1,top:"0px"},1000);
-		});	
+		});
 	});
 
 	jQuery('.animate_from_bottom').each(function () {
 		jQuery(this).appear(function() {
 			jQuery(this).delay(150).animate({opacity:1,bottom:"0px"},1000);
-		});	
+		});
 	});
 
 
 	jQuery('.animate_from_left').each(function () {
 		jQuery(this).appear(function() {
 			jQuery(this).delay(150).animate({opacity:1,left:"0px"},1000);
-		});	
+		});
 	});
 
 
 	jQuery('.animate_from_right').each(function () {
 		jQuery(this).appear(function() {
 			jQuery(this).delay(150).animate({opacity:1,right:"0px"},1000);
-		});	
+		});
 	});
 
 	jQuery('.animate_fade_in').each(function () {
 		jQuery(this).appear(function() {
 			jQuery(this).delay(350).animate({opacity:1,right:"0px"},1000);
-		});	
+		});
 	});
 }
 
@@ -386,14 +385,13 @@ function _superslide() {
 
 		if(data_mouseover_stop == 'true') {
 
-			// Stop on mouse over ! 
+			// Stop on mouse over !
 			jQuery('#slider').on('mouseenter', function() {
 				jQuery(this).superslides('stop');
 				// console.log('Stopped')
 			});
 			jQuery('#slider').on('mouseleave', function() {
 				jQuery(this).superslides('start');
-				// console.log('_start')
 			});
 
 		}
@@ -495,7 +493,6 @@ function _owl_carousel() {
 /** 05. Popover
  **************************************************************** **/
 function _popover() {
-
 		jQuery("a[data-toggle=popover]").bind("click", function(e) {
 			e.preventDefault();
 		});
@@ -509,8 +506,7 @@ function _popover() {
 				trigger: 'manual'
 
 			}).click(function(e) {
-
-				jQuery(this).popover('show');
+                e.preventDefault();
 				jQuery('.popover-title').append('<button type="button" class="close">&times;</button>');
 				clickedAway = false;
 				isVisible = true;
@@ -519,7 +515,6 @@ function _popover() {
 			});
 
 			jQuery(document).click(function(e) {
-
 				if(isVisible & clickedAway) {
 
 					jQuery("a[data-toggle=popover], button[data-toggle=popover]").popover('hide')
@@ -552,7 +547,7 @@ function _popover() {
 		});
 
 
-	// jQuery("a[data-toggle=popover], button[data-toggle=popover]").popover();
+	jQuery("a[data-toggle=popover], button[data-toggle=popover]").popover();
 }
 
 
@@ -576,15 +571,14 @@ function _lightbox() {
 			tCounter: 	'%curr% / %total%'
 		},
 
-		image: 	{ 
-			tError: 	'Image not loaded!' 
+		image: 	{
+			tError: 	'Image not loaded!'
 		},
 
-		ajax: 	{ 
-			tError: 	'Content not loaded!' 
+		ajax: 	{
+			tError: 	'Content not loaded!'
 		}
 	});
-
 	jQuery(".lightbox").each(function() {
 
 		var _t 			= jQuery(this),
@@ -605,14 +599,10 @@ function _lightbox() {
 				},
 
 				gallery: {
-					enabled: false,
-					navigateByImgClick: true,
-					preload: 			[0,1],
-					arrowMarkup: 		'<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
-					tPrev: 				'Previou',
-					tNext: 				'Next',
-					tCounter: 			'<span class="mfp-counter">%curr% / %total%</span>'
-				},
+					enabled: true
+				}
+
+
 			};
 
 		if(_t.data("plugin-options")) {
@@ -989,7 +979,7 @@ function _toggle() {
 
 
 
-	// scroll 
+	// scroll
 	function wheel(e) {
 	  e.preventDefault();
 	}
@@ -1005,7 +995,7 @@ function _toggle() {
 		if (window.removeEventListener) {
 			window.removeEventListener('DOMMouseScroll', wheel, false);
 		}
-		window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
+		window.onmousewheel = document.onmousewheel = document.onkeydown = null;
 	}
 
 	// overlay
@@ -1048,7 +1038,7 @@ function _toggle() {
 			// force iPad's native controls
 			iPadUseNativeControls: false,
 			// force iPhone's native controls
-			iPhoneUseNativeControls: false, 
+			iPhoneUseNativeControls: false,
 			// force Android's native controls
 			AndroidUseNativeControls: false,
 			// forces the hour marker (##:00:00)
@@ -1104,7 +1094,7 @@ function _toggle() {
 			// and center it by scrolling the video viewport
 			jQuery('.video-wrap').scrollLeft((jQuery('video').width() - jQuery(window).width()) / 2);
 			jQuery('.video-wrap').scrollTop((jQuery('video').height() - jQuery(window).height()) / 2);
-		}	
+		}
 
 	}
 
@@ -1150,7 +1140,7 @@ function _toggle() {
 
 	}
 
-	
+
 	function showMap(initWhat) {
 		var script 		= document.createElement('script');
 		script.type 	= 'text/javascript';
@@ -1158,7 +1148,7 @@ function _toggle() {
 		document.body.appendChild(script);
 	}
 
-	
+
 	// INIT CONTACT, NLY IF #contactMap EXISRS
 	if(jQuery("#gmap").length > 0) {
 		showMap('contactMap');
@@ -1225,7 +1215,7 @@ function _toggle() {
 		}(document,"script","twitter-wjs");
 
 	}
-	
+
 
 
 
@@ -1236,24 +1226,24 @@ function _toggle() {
 
 ( function( $ ) {
 	"use strict";
-	
+
 	// Define default settings
 	var defaults = {
 		action: function() {},
 		runOnLoad: false,
 		duration: 500
 	};
-	
+
 	// Define global variables
 	var settings = defaults,
 		running = false,
 		start;
-	
+
 	var methods = {};
-	
+
 	// Initial plugin configuration
 	methods.init = function() {
-		
+
 		// Allocate passed arguments to settings based on type
 		for( var i = 0; i <= arguments.length; i++ ) {
 			var arg = arguments[i];
@@ -1269,26 +1259,26 @@ function _toggle() {
 					break;
 			}
 		}
-	
+
 		// Process each matching jQuery object
 		return this.each(function() {
-		
+
 			if( settings.runOnLoad ) { settings.action(); }
-			
+
 			jQuery(this).resize( function() {
-				
+
 				methods.timedAction.call( this );
-				
+
 			} );
-		
+
 		} );
 	};
-	
+
 	methods.timedAction = function( code, millisec ) {
-		
+
 		var doAction = function() {
 			var remaining = settings.duration;
-			
+
 			if( running ) {
 				var elapse = new Date() - start;
 				remaining = settings.duration - elapse;
@@ -1298,40 +1288,40 @@ function _toggle() {
 					running = false;
 					// Perform user defined function
 					settings.action();
-				
+
 					return;
 				}
 			}
 			wait( remaining );
 		};
-		
+
 		var wait = function( time ) {
 			running = setTimeout( doAction, time );
 		};
-		
+
 		// Define new action starting time
 		start = new Date();
-		
+
 		// Define runtime settings if function is run directly
 		if( typeof millisec === 'number' ) { settings.duration = millisec; }
 		if( typeof code === 'function' ) { settings.action = code; }
-		
+
 		// Only run timed loop if not already running
 		if( !running ) { doAction(); }
-		
+
 	};
 
-	
+
 	$.fn.afterResize = function( method ) {
-		
+
 		if( methods[method] ) {
 			return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ) );
 		} else {
 			return methods.init.apply( this, arguments );
 		}
-		
+
 	};
-	
+
 })(jQuery);
 
 

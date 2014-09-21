@@ -15,15 +15,15 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'jonasz',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'jonasz',  # Or path to database file if using sqlite3.
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': '127.0.0.1',                      # Empty for localhost through$
+        'HOST': '127.0.0.1',  # Empty for localhost through$
         'PORT': '',
         'OPTIONS': {
-         "init_command": "SET foreign_key_checks = 0;",
-    },
+            "init_command": "SET foreign_key_checks = 0;",
+        },
     }
 
 }
@@ -32,8 +32,8 @@ DATABASES = {
 # See https://docs.djangoproject.com/en/1.4/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
 SOUTH_MIGRATION_MODULES = {
-        'easy_thumbnails': 'easy_thumbnails.south_migrations',
-    }
+    'easy_thumbnails': 'easy_thumbnails.south_migrations',
+}
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -49,7 +49,14 @@ SITE_ID = 1
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
+LOCALE_PATHS = (
+    os.path.join(PROJECT_ROOT, 'apps', 'cms_plugins', 'attractions', 'locale'),
+    os.path.join(PROJECT_ROOT, 'apps', 'cms_plugins', 'facilities', 'locale'),
+    os.path.join(PROJECT_ROOT, 'apps', 'cms_plugins', 'gallery', 'locale'),
+    os.path.join(PROJECT_ROOT, 'apps', 'cms_plugins', 'slider', 'locale'),
+    os.path.join(PROJECT_ROOT, 'templates', 'locale'),
 
+)
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale.
 USE_L10N = True
@@ -64,7 +71,7 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'public', 'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/media/media/'
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -78,8 +85,8 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT,'static'),
-   # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    os.path.join(PROJECT_ROOT, 'static'),
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
@@ -89,7 +96,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -100,19 +107,17 @@ SECRET_KEY = '7ml=w+v%3_o5q-2tuu-+z3mvy*z&amp;qd8&amp;^-s1vgjt^lcmwib2$1'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.doc.XViewMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
-    #    REVOLUTION^^   SLIDER MIDDLEWARE
-    'apps.cms_plugins.slider.middleware.SliderMediaMiddleware'
+    # REVOLUTION^^   SLIDER MIDDLEWARE
 
 )
 
@@ -131,7 +136,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
 
-    #cms
+    # cms
     'south',
     'menus',
     'mptt',
@@ -185,7 +190,7 @@ LOGGING = {
     }
 }
 
-#DJango CMS
+# DJango CMS
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.i18n',
@@ -208,13 +213,13 @@ LANGUAGES = [
     ('pl', 'Polish'),
     ('en', 'English'),
 ]
-CMS_REDIRECTS=True
-CMS_SEO_FIELDS=True
+CMS_REDIRECTS = True
+CMS_SEO_FIELDS = True
 
 #Emails
 CONTACT_EMAIL_TO = ['pensjonatjonasz@op.pl', 'mateuszdargacz@gmail.com']
 #email settings
-EMAIL_FOOTER= u"\n\nPensjonat Jonasz\nDębki\ntel. 693 519 890, 602 444 508\npensjonatjonasz@op.pl\nNumer konta:  do wypełnienia"
+EMAIL_FOOTER = u"\n\nPensjonat Jonasz\nDębki\ntel. 723 573 620, 602 444 508\npensjonatjonasz@op.pl\nNumer konta:  do wypełnienia"
 DEFAULT_FROM_EMAIL = 'Pensjonat  "Jonasz" <rezerwacja@jonasz.pl>'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.zoho.com'
@@ -228,8 +233,8 @@ EMAIL_HOST_USER = 'rezerwacja@jonasz.pl'
 #     pass
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'jonasz.db',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'jonasz.db',  # Or path to database file if using sqlite3.
 
     }
 

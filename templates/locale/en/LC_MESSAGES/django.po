@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 17:17-0500\n"
+"POT-Creation-Date: 2014-09-18 15:56-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,249 +16,201 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
 
 #: base.html:119
 msgid "Languages"
-msgstr ""
+msgstr "Languages"
 
 #: base.html:194
 msgid "Zarezerwuj"
-msgstr ""
+msgstr "Book"
 
 #: base.html:194
 msgid "miejsce teraz!"
-msgstr ""
+msgstr "room now!"
 
 #: base.html:197
 msgid ""
 "Wypełnij Formularz kontaktowy, a przedstawimy Ci pełną ofertę, oraz aktualne "
 "promocje!"
-msgstr ""
+msgstr "Send Us a message, and We will provide you information about our services, and current "
+"special offers!"
 
 #: base.html:200
 msgid "Napisz do nas"
-msgstr ""
+msgstr "Send Us a message"
 
 #: base.html:220
 msgid "Przewiń do góry"
-msgstr ""
+msgstr "scroll to top"
 
 #: base.html:230
 msgid "Kontakt"
-msgstr ""
+msgstr "Contact"
 
 #: base.html:236
 msgid "Ul. Liliowa"
-msgstr ""
+msgstr "Liliowa street"
 
 #: base.html:237
 msgid "Pomorze, Polska"
-msgstr ""
+msgstr "Pomerania, Poland"
 
 #: contact_plugin.html:18
 msgid "Book your apartment"
-msgstr "Zarezerwuj apartament"
+msgstr "Book your apartment"
 
 #: contact_plugin.html:31
 msgid "Send"
-msgstr "Wyślij"
+msgstr "Send"
 
 #: contact_plugin.html:37
 msgid "Thank you message has been sent"
-msgstr "Dziękujemy. Twoja wiadomość została wysłana"
+msgstr "Thank you message has been sent"
 
 #: contact_plugin.html:43
 msgid ""
 "If you selected date the apartment is already booked, it will be suggested "
 "to you another closest to date."
-msgstr "Jeśli wybrałeś zajęty termin, zasugerujemy najbliższy wolny."
+msgstr ""
 
 #: contact_plugin.html:51
 msgid "From"
-msgstr "od"
+msgstr ""
 
 #: contact_plugin.html:52
 msgid "To"
-msgstr "do"
+msgstr ""
 
 #: contact_plugin.html:53
 msgid "Duration"
-msgstr "Czas trwania"
+msgstr ""
 
 #: contact_plugin.html:54
 msgid "Price of accommodation"
-msgstr "Cena zakwaterowania"
+msgstr ""
 
 #: contact_plugin.html:55
 msgid "HIGH SEASON"
-msgstr "Wysoki sezon"
+msgstr ""
 
 #: contact_plugin.html:57 contact_plugin.html.py:61
 msgid "$"
-msgstr "PLN"
+msgstr ""
 
 #: contact_plugin.html:59
 msgid "LOW SEASON"
-msgstr "Niski sezon"
+msgstr ""
 
 #: cms/plugins/googlemap.html:69
 msgid "Our location"
-msgstr "Lokalizacja"
+msgstr ""
 
 #: cms/plugins/googlemap.html:84
 msgid "Your address: "
-msgstr "Twój adres: "
+msgstr ""
 
 #: cms/plugins/googlemap.html:85
 msgid "Calculate route"
-msgstr "Oblicz trasę"
+msgstr ""
 
 #: cms/sites/about.html:14
 msgid "Pensjonat Jonasz"
-msgstr ""
+msgstr "Jonasz apartments"
 
 #: cms/sites/about.html:14
 msgid "zaprasza nad morze"
-msgstr ""
+msgstr "invites to seaside"
 
 #: cms/sites/about.html:15
 msgid "Dębki nad brzegiem bałtyku, to udany wypoczynek przez cały rok"
-msgstr ""
+msgstr "Debki ​​on the banks of baltic sea, guarantee relaxing holiday, throughout the year"
 
 #: cms/sites/about.html:18
 msgid ""
 "Witamy na stronie Pensjonatu Jonasz, na których to zapoznają się Państwo z "
 "pełną ofertą noclegową oraz z walorami urokliwej miejscowości jaką są Dębki."
-msgstr ""
+msgstr "Welcome to Jonasz apartments website, where you can get familiar with "
+"Our accomodation offer and qualities of charming surroundings of Debki."
 
 #: cms/sites/atractions.html:17
 msgid "Attractions"
-msgstr "Atrakcje"
+msgstr ""
 
 #: cms/sites/contact.html:19
 msgid "Napisz <strong><em>do nas!</em></strong>"
-msgstr ""
-
-#: cms/sites/contact.html:25
-msgid "Full Name"
-msgstr "Imie i Nazwisko"
-
-#: cms/sites/contact.html:31
-msgid "E-mail Address"
-msgstr "Adres e-mail"
-
-#: cms/sites/contact.html:41
-msgid "Subject"
-msgstr "Tytuł"
-
-#: cms/sites/contact.html:50
-msgid "Message"
-msgstr "Wiadomość"
+msgstr "Send <strong><em>Us a message!</em></strong>"
 
 #: cms/sites/contact.html:60
 msgid "Wyślij"
-msgstr ""
+msgstr "Send"
 
 #: cms/sites/contact.html:61
 msgid "Ładowanie"
-msgstr ""
+msgstr "Loading"
 
-#: cms/sites/contact.html:69
+#: cms/sites/contact.html:70
 msgid "Lokalizacja"
-msgstr ""
-
-#: cms/sites/contact.html:75
-msgid "Adres:"
-msgstr ""
+msgstr "Location"
 
 #: cms/sites/contact.html:76
-msgid "Telefon:"
-msgstr ""
+msgid "Adres:"
+msgstr "Address:"
 
 #: cms/sites/contact.html:77
+msgid "Telefon:"
+msgstr "Phone:"
+
+#: cms/sites/contact.html:78
 msgid "Email:"
 msgstr ""
 
 #: cms/sites/surroundings.html:15
 msgid "Okolice"
-msgstr ""
+msgstr "Surroundings"
 
 #: cms/sites/surroundings.html:16
 msgid "jakiś tekst odnośnie okolic"
-msgstr ""
+msgstr "Some surroundings description"
 
 #: cms/sites/thanks.html:7
 msgid "Thanks for booking!"
-msgstr "Dziękujemy za rezerwację!"
+msgstr ""
 
 #: cms/sites/thanks.html:10
 msgid ""
 "We will contact you within 24h. You should recieve an e-mail with payment "
 "instructions. Payment will confirm your reservation."
 msgstr ""
-"Skontaktujemy się z Tobą w ciągu 24 godzin. Powinieneś otrzymać e-mail z "
-"instrukcjąpłatności. Płatność potwierdzi Twoją rezerwację."
 
-#~ msgid "Booking"
-#~ msgstr "Rezerwacja"
+#: templates/gallery.html:25
+msgid "Galeria"
+msgstr "<strong>Explore</strong> our gallery"
 
-#~ msgid "Arrival"
-#~ msgstr "od:"
+#: templates/gallery.html:27
+msgid "Zapraszamy do zobaczenia zdjęc w naszej galerii"
+msgstr "Welcome to Our gallery"
 
-#~ msgid "Check out"
-#~ msgstr "do:"
+#: templates/gallery.html:30
+msgid "Wszystkie"
+msgstr "all"
 
-#~ msgid "Number of persons"
-#~ msgstr "Liczba osób"
+#: templates/gallery.html:50
+msgid "Powiększ"
+msgstr "Zoom"
 
-#~ msgid "check availability"
-#~ msgstr "Sprawdź dostępność"
+#: templates/gallery.html:50
+msgid "zdjęcie"
+msgstr "image"
 
-#~ msgid "Details"
-#~ msgstr "Szczegóły"
+#: models.py:10
+msgid "Pokoje"
+msgstr "Apartments"
 
-#~ msgid "Rooms"
-#~ msgstr "Pokoje"
+#: models.py:11
+msgid "Budynek"
+msgstr "Building"
 
-#~ msgid "Max people"
-#~ msgstr "Ilość osób"
-
-#~ msgid "Surface"
-#~ msgstr "powieszchnia"
-
-#~ msgid "Prices"
-#~ msgstr "ceny"
-
-#~ msgid "Photos"
-#~ msgstr "Zdjęcia"
-
-#~ msgid "Availability calendar"
-#~ msgstr "Kalendarz dostępności"
-
-#~ msgid "Book"
-#~ msgstr "Zarezerwuj"
-
-#, fuzzy
-#~ msgid "Pricing"
-#~ msgstr "ceny"
-
-#~ msgid "Feel free to contact us!"
-#~ msgstr "Napisz do nas!"
-
-#~ msgid ""
-#~ "Have a question? Post! and we will contact you by phone or at the "
-#~ "following e-mail within 24 hours."
-#~ msgstr ""
-#~ "Masz pytanie? Napisz! Skontaktujemy się na podany numer telefonu lubadres "
-#~ "e-mail w ciągu 24 godzin."
-
-#~ msgid "Phone number"
-#~ msgstr "Numer telefonu"
-
-#~ msgid "Write a message"
-#~ msgstr "Napisz wiadomość"
-
-#~ msgid "Worth seeing"
-#~ msgstr "Warto zobaczyć"
+#: models.py:12
+msgid "Okolica"
+msgstr "Surroundings"

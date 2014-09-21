@@ -7,7 +7,6 @@ from django.views.generic import TemplateView
 
 
 admin.autodiscover()
-
 urlpatterns = patterns('',
     url(r'^ajax/',include('apps.cms_plugins.contact_form.urls', namespace='ajax')),
     url(r'^zohoverify/verifyforzoho.html$', TemplateView.as_view(template_name='verify/verifyforzoho.html')),
@@ -16,7 +15,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
 
-)+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\
+)+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
                  # + static('/pl/', document_root=settings.MEDIA_ROOT)
 
 

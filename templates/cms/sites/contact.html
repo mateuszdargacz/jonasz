@@ -17,17 +17,18 @@
             <!-- FORM -->
             <div class="col-md-8">
                 <h2>{% trans "Napisz <strong><em>do nas!</em></strong>" %} </h2>
+
                 <form class="white-row" id="contact-form" action="#" method="post">
                     <div class="row">
-                        <div  class="form-group">
+                        <div class="form-group">
                             <div id="name-group" class="col-md-6">
-                                <label>Full Name *</label>
+                                <label>{% trans  'Full Name' %} *</label>
                                 <input type="text" value="" data-msg-required="Please enter your name." maxlength="100"
                                        class="form-control" name="name" id="name">
                             </div>
 
                             <div id="email-group" class="col-md-6">
-                                <label>E-mail Address *</label>
+                                <label>{% trans 'E-mail Address' %} *</label>
                                 <input type="email" value="" data-msg-required="Please enter your email address."
                                        data-msg-email="Please enter a valid email address." maxlength="100"
                                        class="form-control" name="email" id="email">
@@ -35,9 +36,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div  class="form-group">
+                        <div class="form-group">
                             <div id="phone-group" class="col-md-12">
-                                <label>Subject *</label>
+                                <label>{% trans 'Subject' %} *</label>
                                 <input type="text" value="" data-msg-required="Please enter the subject."
                                        maxlength="100" class="form-control" name="phone" id="subject">
                             </div>
@@ -46,16 +47,17 @@
                     <div class="row">
                         <div class="form-group">
                             <div id="message-group" class="col-md-12">
-                                <label>Message *</label>
+                                <label>{%  trans 'Message' %} *</label>
                                 <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10"
                                           class="form-control" name="message" id="message"></textarea>
                             </div>
                         </div>
                     </div>
                     <br/>
+
                     <div class="row">
                         <div class="col-md-12" id="submit-contact">
-                            <input type="submit"  value="{% trans "Wyślij" %}" class="btn btn-primary btn-lg"
+                            <input type="submit" value="{% trans "Wyślij" %}" class="btn btn-primary btn-lg"
                                    data-loading-text="{% trans "Ładowanie" %}">
                         </div>
                     </div>
@@ -64,29 +66,30 @@
             <!-- /FORM -->
             <!-- INFO -->
             <div class="col-md-4">
-
                 <h2>{% trans "Lokalizacja" %}</h2>
 
                 <div class="white-row">
+
+
+                    <p class="nomargin-bottom">
+                        <span class="block"><strong><i class="fa fa-map-marker"></i> {% trans "Adres:" %}</strong> Dębki</span>
+                        <span class="block"><strong><i class="fa fa-phone"></i> {% trans "Telefon:" %}</strong> 723 573 620, 602 444 508</span>
+                        <span class="block"><strong><i class="fa fa-envelope"></i> {% trans "Email:" %}</strong> <a
+                                href="mailto:pensjonatjonasz@op.pl">pensjonatjonasz@op.pl</a></span>
+                    </p>
+                    <div class="divider white half-margins"><!-- divider -->
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="map">
                     <div id="gmap"><!-- google map --></div>
                     <script type="text/javascript">
                         var $googlemap_latitude = 54.826865,
                                 $googlemap_longitude = 18.0820632,
                                 $googlemap_zoom = 11;
                     </script>
-
-                    <div class="divider white half-margins"><!-- divider -->
-                        <i class="fa fa-star"></i>
-                    </div>
-
-                    <p class="nomargin-bottom">
-                        <span class="block"><strong><i class="fa fa-map-marker"></i> {% trans "Adres:" %}</strong> Dębki</span>
-                        <span class="block"><strong><i class="fa fa-phone"></i> {% trans "Telefon:" %}</strong> 693 519 890, 602 444 508</span>
-                        <span class="block"><strong><i class="fa fa-envelope"></i> {% trans "Email:" %}</strong> <a
-                                href="mailto:pensjonatjonasz@op.pl">pensjonatjonasz@op.pl</a></span>
-                    </p>
-
                 </div>
+                </div>
+
             </div>
             <!-- /INFO -->
 

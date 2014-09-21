@@ -29,7 +29,7 @@ class Slider(models.Model):
 
 class Slide(models.Model):
     slider = models.ForeignKey(_("Slider"))
-    background = models.ImageField(_(u"Slider background"), upload_to="media/slider/images/backgrounds/")
+    background = models.ImageField(_(u"Slider background"), upload_to="slider/images/backgrounds/")
     slide_in = models.CharField(_('Show slide effect'), max_length=128, choices=[
         ('incube-horizontal', 'incube-horizontal'),
         ('fade', 'fade'),
@@ -59,7 +59,7 @@ class SlideObj(models.Model):
     })
 
     slide = models.ForeignKey(Slide, verbose_name=_("Slide"))
-    image = models.ImageField(_("image"), upload_to="media/sliderobj/images/", null=True, blank=True)
+    image = models.ImageField(_("image"), upload_to="sliderobj/images/", null=True, blank=True)
     description = models.CharField(_("Text"), max_length=60, blank=True, null=True)
     link = models.URLField(_("Link"), max_length=120, null=True, blank=True)
     link_name = models.CharField(_("Link name"), max_length=60, null=True, blank=True)

@@ -25,7 +25,7 @@ class Attractions(Sortable):
 class Attraction(Sortable):
     attractions = models.ForeignKey(Attractions, verbose_name=_("Attraction set"))
     title = models.CharField(_("Title"), max_length=35)
-    image = models.ImageField(_(u"Image"), upload_to="media/gallery/images/")
+    image = models.ImageField(_(u"Image"), upload_to="gallery/images/")
     image_position = models.CharField(_("Image position"),max_length=5, choices=(
         ('left', _('Left')),
         ('right', _('Right')),
