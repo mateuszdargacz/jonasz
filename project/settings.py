@@ -211,15 +211,14 @@ EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'rezerwacja@jonasz.pl'
 
-#TODO UNCOMMENT!!!!!!!!!!!
-# try:
-#     execfile('%s/project/local_settings.py' % PROJECT_PATH)
-# except IOError:
-#     pass
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/home/stare_strony/domains/jonasz/jonasz.db',  # Or path to database file if using sqlite3.
+        'NAME': 'jonasz.db',  # Or path to database file if using sqlite3.
     }
 
 }
+try:
+    execfile('%s/project/local_settings.py' % PROJECT_PATH)
+except IOError:
+    pass
