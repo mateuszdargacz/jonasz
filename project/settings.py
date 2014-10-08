@@ -219,7 +219,7 @@ EMAIL_HOST_USER = 'rezerwacja@jonasz.pl'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': PROJECT_PATH + '/jonasz.db',  # Or path to database file if using sqlite3.
+        'NAME': '/home/stare_strony/domains/jonasz/jonasz.db',  # Or path to database file if using sqlite3.
     }
 
 }
