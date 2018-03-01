@@ -209,8 +209,7 @@ DEFAULT_FROM_EMAIL = 'Willa  "Jonasz" <email@willa-debki-jonasz.pl>'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'rezerwacja@willa-debki-jonasz.pl'
-
+EMAIL_HOST_USER = 'email@willa-debki-jonasz.pl'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
