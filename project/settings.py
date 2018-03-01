@@ -204,8 +204,8 @@ CMS_SEO_FIELDS = True
 #Emails
 CONTACT_EMAIL_TO = ['mt.quercus@op.pl', 'mateuszdargacz@gmail.com']
 #email settings
-EMAIL_FOOTER = u"\n\nPensjonat Jonasz\nDębki\ntel. 723 573 620, 602 444 508\npensjonatjonasz@op.pl\nNumer konta:  do wypełnienia"
-DEFAULT_FROM_EMAIL = 'Pensjonat  "Jonasz" <rezerwacja@jonasz.pl>'
+EMAIL_FOOTER = u"\n\nWilla Jonasz\nDębki\ntel. 723 573 620, 602 444 508\npensjonatjonasz@op.pl\nNumer konta:  do wypełnienia"
+DEFAULT_FROM_EMAIL = 'Willa  "Jonasz" <rezerwacja@jonasz.pl>'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_PORT = 587

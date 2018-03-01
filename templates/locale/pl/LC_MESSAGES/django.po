@@ -116,7 +116,7 @@ msgid "Calculate route"
 msgstr "Oblicz trasę"
 
 #: cms/sites/about.html:14
-msgid "Pensjonat Jonasz"
+msgid "Willa Jonasz"
 msgstr ""
 
 #: cms/sites/about.html:14
@@ -129,7 +129,7 @@ msgstr ""
 
 #: cms/sites/about.html:18
 msgid ""
-"Witamy na stronie Pensjonatu Jonasz, na których to zapoznają się Państwo z "
+"Witamy na stronie Willi Jonasz, na której to zapoznają się Państwo z "
 "pełną ofertą noclegową oraz z walorami urokliwej miejscowości jaką są Dębki."
 msgstr ""
 

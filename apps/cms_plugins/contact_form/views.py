@@ -11,18 +11,17 @@ from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def ajaxContactForm(request):
-    context= {}
     if request.is_ajax():
         name = request.POST.get("name")
         email = request.POST.get("email")
         phone = request.POST.get("phone")
         message = request.POST.get("message")
-        subject = u"[Pensjonat JONASZ] %s" % phone
+        subject = u"[Willa JONASZ] %s" % phone
         try:
             message_to_user = render_to_string('mail/contact_form.html',
-                                               {   'name'   : name,
-                                                   'email'  : email,
-                                                   'message': message})
+                                               {'name': name,
+                                                'email': email,
+                                                'message': message})
             print "pre-sent"
             mail = EmailMessage(subject,
                                 message_to_user,
@@ -33,16 +32,16 @@ def ajaxContactForm(request):
             mail.content_subtype = "html"
             mail.send()
             print "sent"
-            context ={
+            context = {
                 'done': True,
                 'message': u'Twoja wiadomość została wysłana',
-                }
+            }
         except Exception as e:
             print ('%s (%s)' % (e.message, type(e)))
-            context ={
+            context = {
                 'done': False,
                 'message': u'Wysyłanie wiadomości się nie powiodło, prosimy o inną formę kontaktu',
-                }
+            }
         return HttpResponse(json.dumps(context), content_type="application/json")
     else:
         raise Http404
